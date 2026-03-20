@@ -325,7 +325,20 @@ function setBreadcrumb(crumbs) {
     return `${arrow}<span class="${cls}"${action} title="${c.label}">${dot}${label}</span>`;
   }).join('');
   el.innerHTML = buildHtml(false);
-  if (notch) notch.innerHTML = buildHtml(true);
+  if (notch) {
+    notch.innerHTML = buildHtml(true);
+    requestAnimationFrame(() => {
+      const nb = document.querySelector('.navbar');
+      const nr = notch.getBoundingClientRect();
+      const navW = nb ? nb.offsetWidth : window.innerWidth;
+      const cx = nr.left + nr.width / 2;
+      const hw = nr.width / 2;
+      const l = ((cx - hw) / navW * 100).toFixed(2);
+      const r = ((cx + hw) / navW * 100).toFixed(2);
+      if (nb) nb.style.setProperty('--notch-mask',
+        `linear-gradient(90deg, #000 ${l}%, transparent ${l}%, transparent ${r}%, #000 ${r}%)`);
+    });
+  }
   [el, notch].forEach(container => {
     if (!container) return;
     container.querySelectorAll('[data-action]').forEach(btn => {

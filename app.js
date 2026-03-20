@@ -1764,7 +1764,11 @@ function setupEvents() {
   document.querySelectorAll('.theme-swatch').forEach(b => b.addEventListener('click', () => {
     setTheme(b.dataset.theme);
     const lbl = document.getElementById('themePickerLabel');
+    const dot = document.getElementById('themePickerDot');
     if (lbl) lbl.textContent = b.querySelector('.swatch-label').textContent;
+    if (dot) dot.style.background = b.querySelector('.swatch-dot').style.background;
+    document.getElementById('themeGrid').hidden = true;
+    document.getElementById('themePickerToggle').classList.remove('open');
   }));
   const themeToggle = document.getElementById('themePickerToggle');
   const themeGrid = document.getElementById('themeGrid');

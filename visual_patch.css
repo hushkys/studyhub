@@ -677,12 +677,21 @@
 /* ---- THEME PICKER TOGGLE ---- */
 .theme-picker-toggle {
   display: flex; align-items: center; justify-content: space-between;
-  width: 100%; padding: 8px 12px;
-  background: var(--surface2); border: 1px solid var(--border2);
-  border-radius: 8px; color: var(--text); font-size: 0.85rem;
-  cursor: pointer; transition: background .15s;
+  width: 100%; padding: 9px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 10px;
+  color: var(--text); font-size: 0.85rem; font-weight: 500;
+  cursor: pointer; transition: background .15s, border-color .15s;
+  gap: 8px;
 }
-.theme-picker-toggle:hover { background: var(--surface2); filter: brightness(1.15); }
-.theme-picker-toggle svg { transition: transform .2s; }
+.theme-picker-toggle:hover { background: var(--surface2); border-color: var(--accent); }
+.theme-picker-toggle .swatch-preview {
+  width: 18px; height: 18px; border-radius: 50%;
+  border: 1.5px solid var(--border2); flex-shrink: 0;
+}
+.theme-picker-toggle svg { margin-left: auto; opacity: .5; transition: transform .2s; flex-shrink: 0; }
 .theme-picker-toggle.open svg { transform: rotate(180deg); }
+.theme-picker-toggle.open { border-color: var(--accent); background: var(--surface2); }
 #themeGrid { margin-top: 8px; }
+#themeGrid[hidden] { display: none !important; }

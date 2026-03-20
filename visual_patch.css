@@ -598,3 +598,33 @@
   pointer-events: none;
 }
 .badge-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* ---- 2K / HIGH-DPI DISPLAYS (1920px+) ---- */
+@media (min-width: 1920px) {
+  :root {
+    --layout-max: 1600px;
+    --layout-pad: 100px;
+    --layout-gap: 28px;
+    --block-pad: 40px;
+    font-size: 17px;
+  }
+}
+
+/* ---- 4K DISPLAYS (2560px+) ---- */
+@media (min-width: 2560px) {
+  :root {
+    --layout-max: 2200px;
+    --layout-pad: 140px;
+    --layout-gap: 36px;
+    --block-pad: 52px;
+    font-size: 20px;
+  }
+
+  .cat-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .practice-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

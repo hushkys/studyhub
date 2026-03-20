@@ -601,30 +601,42 @@
 
 /* ---- 2K / HIGH-DPI DISPLAYS (1920px+) ---- */
 @media (min-width: 1920px) {
+  html                          { font-size: 17px !important; }
+  html[data-font-size="sm"]     { font-size: 15px !important; }
+  html[data-font-size="md"]     { font-size: 17px !important; }
+  html[data-font-size="lg"]     { font-size: 20px !important; }
+  html[data-font-size="xl"]     { font-size: 24px !important; }
+
   :root {
-    --layout-max: 1600px;
-    --layout-pad: 100px;
+    --layout-max: 1700px;
+    --layout-pad: 80px;
     --layout-gap: 28px;
     --block-pad: 40px;
-    font-size: 17px;
+    --nav-h: 68px;
   }
+
+  .navbar-inner { max-width: 1700px; padding: 0 40px; }
+
+  .hero-content { max-width: 1000px; }
 }
 
 /* ---- 4K DISPLAYS (2560px+) ---- */
 @media (min-width: 2560px) {
+  html                          { font-size: 22px !important; }
+  html[data-font-size="sm"]     { font-size: 18px !important; }
+  html[data-font-size="md"]     { font-size: 22px !important; }
+  html[data-font-size="lg"]     { font-size: 26px !important; }
+  html[data-font-size="xl"]     { font-size: 32px !important; }
+
   :root {
-    --layout-max: 2200px;
-    --layout-pad: 140px;
+    --layout-max: 2400px;
+    --layout-pad: 120px;
     --layout-gap: 36px;
     --block-pad: 52px;
-    font-size: 20px;
+    --nav-h: 88px;
   }
 
-  .cat-cards {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  .navbar-inner { max-width: 2400px; padding: 0 60px; }
 
-  .practice-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+  .hero-content { max-width: 1400px; }
 }

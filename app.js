@@ -1785,8 +1785,8 @@ function setupEvents() {
   }, { passive: true });
 
   // Practice
-  document.getElementById('startQuiz').addEventListener('click', startQuiz);
-  document.getElementById('startExercises').addEventListener('click', startExercises);
+  document.getElementById('startQuiz')?.addEventListener('click', startQuiz);
+  document.getElementById('startExercises')?.addEventListener('click', startExercises);
   document.getElementById('backFromExercises').addEventListener('click', () => { showGameBg(false); goHome(); });
   document.querySelectorAll('[data-diff-ex]').forEach(btn => {
     btn.addEventListener('click', () => {

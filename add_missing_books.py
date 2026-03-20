@@ -6,7 +6,8 @@ Kontext: zápisky z Daily_work/study/Maturita/Povinna četba/
 
 import json, re, os, time, sys, zipfile, unicodedata, urllib.request
 
-API_KEY = "REMOVED"
+import os
+API_KEY = os.environ.get("GEMINI_API_KEY", "")
 MODEL   = "gemini-3.1-flash-lite-preview"
 URL     = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent?key={API_KEY}"
 DATA_FILE = "/root/maturita-web-uceni3/data.js"

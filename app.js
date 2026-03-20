@@ -309,6 +309,19 @@ function handleRoute() {
   }
 }
 window.addEventListener('popstate', handleRoute);
+
+function updateNotchMask() {
+  const notch = document.getElementById('navNotch');
+  const navbar = document.querySelector('.navbar');
+  if (!notch || !navbar) return;
+  const nr = notch.getBoundingClientRect();
+  const nw = navbar.offsetWidth;
+  if (!nr.width) { navbar.style.removeProperty('--notch-mask'); return; }
+  const l = (nr.left / nw * 100).toFixed(2);
+  const r = ((nr.left + nr.width) / nw * 100).toFixed(2);
+  navbar.style.setProperty('--notch-mask',
+    `linear-gradient(90deg,#000 ${l}%,transparent ${l}%,transparent ${r}%,#000 ${r}%)`);
+}
 function setBreadcrumb(crumbs) {
   const el = document.getElementById('navBreadcrumb');
   const notch = document.getElementById('navNotchBc');
@@ -325,7 +338,10 @@ function setBreadcrumb(crumbs) {
     return `${arrow}<span class="${cls}"${action} title="${c.label}">${dot}${label}</span>`;
   }).join('');
   el.innerHTML = buildHtml(false);
-  if (notch) notch.innerHTML = buildHtml(true);
+  if (notch) {
+    notch.innerHTML = buildHtml(true);
+    requestAnimationFrame(() => updateNotchMask());
+  }
   [el, notch].forEach(container => {
     if (!container) return;
     container.querySelectorAll('[data-action]').forEach(btn => {

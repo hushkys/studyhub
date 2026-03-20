@@ -4,3 +4,12 @@ __pycache__/
 *.pyc
 .gemini_cache/
 data.js.backup
+*.backup
+backup.log
+Daily_work/
+00 Škola/
+Maturity25/
+zapisky/
+KYB/
+PRG/
+Čeština/

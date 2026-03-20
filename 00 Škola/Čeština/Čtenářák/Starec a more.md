@@ -1,1 +1,0 @@
-# Starec a more

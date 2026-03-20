@@ -1,4 +1,0 @@
-- vypráví nějaký děj, událost nebo příběh
-- snaha o zajímavost, upoutat čtenáře, napětí, pestrost
-- pracuje se zde s dějovými prvky
-- v neuměleckých textech málo častý; např. recenze (shrnutí děje)

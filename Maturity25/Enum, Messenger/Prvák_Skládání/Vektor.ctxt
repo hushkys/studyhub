@@ -1,7 +1,0 @@
-#BlueJ class context
-comment0.target=Vektor
-comment1.params=bod1\ bod2
-comment1.target=Vektor(Bod,\ Bod)
-comment2.params=
-comment2.target=Bod\ getVektor()
-numComments=3

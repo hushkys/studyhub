@@ -1,8 +1,0 @@
-ng-model - vložení promìnné <input type="text" ng-model="jmeno" ng-change="b = false">
-ng-click - obslužná metoda stisknutí tlaèítka <button class="button button-full button-positive" ng-click="b = true">Submit</button>
-ng-show - zobraz když je splnìná podmínka <span class="text-Error" ng-show="num1==null || num1==undefined || num2==null || num2==undefined">Èísla nebyla zadána</span>
-ng-hide - skryj, když je splnìna podmínka <span ng-hide="num1==null || num1==undefined || num2==null || num2==undefined">Souèet èísel je: {{num1+num2}} </span>
-ng-controller - zavolání metody <input type="number" ng-model="num2" class="number" ng-controller="ExampleController">
-ng-class - použití tøídy za podmínky <label class="item item-input" ng-class="{'border-OK': num2!=null|| num2!=undefined,'border-Error': num2==null || num2==undefined }">
-
-Hra život: https://codepen.io/curnsey/pen/JbPqee

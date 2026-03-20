@@ -1,3 +1,0 @@
-- popisuje buď vnější znaky nějakého objektu, nebo pracovní postup nějakého děje
-- důležitá je volba pořadí při popisu jednotlivých částí
-- např. inzerát, formulář, referát

@@ -1786,6 +1786,8 @@ function setupEvents() {
 
   // Practice
   document.getElementById('startQuiz').addEventListener('click', startQuiz);
+  document.getElementById('sbStartQuiz').addEventListener('click', () => { closeSidebar(); startQuiz(); });
+  document.getElementById('sbStartExercises').addEventListener('click', () => { closeSidebar(); startExercises(); });
   document.getElementById('startExercises').addEventListener('click', startExercises);
   document.getElementById('backFromExercises').addEventListener('click', () => { showGameBg(false); goHome(); });
   document.querySelectorAll('[data-diff-ex]').forEach(btn => {

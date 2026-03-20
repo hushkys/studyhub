@@ -697,3 +697,7 @@
 .theme-picker-toggle.open { border-color: var(--accent); background: var(--surface2); }
 #themeGrid { margin-top: 8px; }
 #themeGrid[hidden] { display: none !important; }
+
+/* ---- HOMEPAGE BOTTOM PADDING ---- */
+#page-home .section { padding-top: 48px; padding-bottom: 48px; }
+#practiceSection { padding-bottom: 32px; }

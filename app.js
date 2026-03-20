@@ -234,7 +234,7 @@ function buildSidebar() {
       </div>
     </div>
   `;
-  nav.appendChild(practiceSection);
+  nav.parentElement.appendChild(practiceSection);
   practiceSection.querySelector('#sbStartQuiz').addEventListener('click', () => {
     const catId = practiceSection.querySelector('#sbQuizCat').value;
     const mainSel = document.getElementById('quizCatSelect');

@@ -101,15 +101,57 @@
   </div>
   <nav id="sidebarNav"></nav>
   <div class="sidebar-bottom">
-    <div class="sb-practice-row">
-      <button class="sb-practice-btn" id="sbStartQuiz">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
-        Kvíz
-      </button>
-      <button class="sb-practice-btn" id="sbStartExercises">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-        Cvičení
-      </button>
+    <div class="sb-practice-label">Procvičování</div>
+    <div class="practice-grid sb-practice-grid">
+      <div class="practice-card" id="quizLauncher">
+        <div class="practice-card-icon-wrap" style="--c:#6366f1">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+        </div>
+        <div class="practice-card-title">Kvíz</div>
+        <div class="diff-selector">
+          <button class="diff-btn active all" data-diff="all">Vše</button>
+          <button class="diff-btn easy" data-diff="easy">Lehká</button>
+          <button class="diff-btn medium" data-diff="medium">Střední</button>
+          <button class="diff-btn hard" data-diff="hard">Těžká</button>
+        </div>
+        <div class="practice-card-footer">
+          <select class="practice-select" id="quizCatSelect">
+            <option value="kyb">KYB</option>
+            <option value="prg">PRG</option>
+            <option value="ces">Čeština</option>
+            <option value="mat">Matematika</option>
+          </select>
+          <button class="practice-start-btn" id="startQuiz">Spustit</button>
+        </div>
+      </div>
+      <div class="practice-card" id="exercisesLauncher">
+        <div class="practice-card-icon-wrap" style="--c:#10b981">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <div class="practice-card-title">Cvičení</div>
+        <div class="diff-selector">
+          <button class="diff-btn active all" data-diff-ex="all">Vše</button>
+          <button class="diff-btn easy" data-diff-ex="easy">Lehká</button>
+          <button class="diff-btn medium" data-diff-ex="medium">Střední</button>
+          <button class="diff-btn hard" data-diff-ex="hard">Těžká</button>
+        </div>
+        <div class="practice-card-footer">
+          <select class="practice-select" id="exTopicSelect">
+            <option value="all">Všechna témata</option>
+            <option value="java-basics">Základy Java/C#</option>
+            <option value="oop">OOP principy</option>
+            <option value="methods">Metody tříd</option>
+            <option value="constructors">Konstruktory</option>
+            <option value="interfaces">Rozhraní a abstrakce</option>
+            <option value="collections">Kolekce a generika</option>
+            <option value="design-patterns">Návrhové vzory</option>
+            <option value="sql">SQL databáze</option>
+            <option value="html-css">HTML a CSS</option>
+            <option value="algorithms">Algoritmizace</option>
+          </select>
+          <button class="practice-start-btn" id="startExercises">Spustit</button>
+        </div>
+      </div>
     </div>
   </div>
 </aside>
@@ -183,68 +225,6 @@
     <div class="ticker-wrap reveal">
       <div class="ticker-track" id="tickerTrack"></div>
     </div>
-
-    <!-- PRACTICE SECTION -->
-    <section class="section reveal" id="practiceSection">
-      <div class="section-inner">
-        <div class="section-label">Procvičování</div>
-        <div class="practice-grid">
-          <div class="practice-card" id="quizLauncher">
-            <div class="practice-card-icon-wrap" style="--c:#6366f1">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
-            </div>
-            <div class="practice-card-title">Kvíz</div>
-            <div class="practice-card-desc">Náhodné otázky z teorie. 5 možností, okamžitá zpětná vazba.</div>
-            <div class="diff-selector" style="margin-bottom:10px;">
-              <span style="font-size:0.65rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;font-weight:700;">Obtížnost:</span>
-              <button class="diff-btn active all" data-diff="all">Vše</button>
-              <button class="diff-btn easy" data-diff="easy">Lehká</button>
-              <button class="diff-btn medium" data-diff="medium">Střední</button>
-              <button class="diff-btn hard" data-diff="hard">Těžká</button>
-            </div>
-            <div class="practice-card-footer">
-              <select class="practice-select" id="quizCatSelect">
-                <option value="kyb">KYB</option>
-                <option value="prg">PRG</option>
-                <option value="ces">Čeština</option>
-                <option value="mat">Matematika</option>
-              </select>
-              <button class="practice-start-btn" id="startQuiz">Spustit</button>
-            </div>
-          </div>
-          <div class="practice-card" id="exercisesLauncher">
-            <div class="practice-card-icon-wrap" style="--c:#10b981">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            </div>
-            <div class="practice-card-title">Cvičení — PRG</div>
-            <div class="practice-card-desc">Drag &amp; drop, doplňování a řazení kódu. 150 cvičení v 10 tématech.</div>
-            <div class="diff-selector" style="margin-bottom:10px;">
-              <span style="font-size:0.65rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;font-weight:700;">Obtížnost:</span>
-              <button class="diff-btn active all" data-diff-ex="all">Vše</button>
-              <button class="diff-btn easy" data-diff-ex="easy">Lehká</button>
-              <button class="diff-btn medium" data-diff-ex="medium">Střední</button>
-              <button class="diff-btn hard" data-diff-ex="hard">Těžká</button>
-            </div>
-            <div class="practice-card-footer">
-              <select class="practice-select" id="exTopicSelect">
-                <option value="all">Všechna témata</option>
-                <option value="java-basics">Základy Java/C#</option>
-                <option value="oop">OOP principy</option>
-                <option value="methods">Metody tříd</option>
-                <option value="constructors">Konstruktory</option>
-                <option value="interfaces">Rozhraní a abstrakce</option>
-                <option value="collections">Kolekce a generika</option>
-                <option value="design-patterns">Návrhové vzory</option>
-                <option value="sql">SQL databáze</option>
-                <option value="html-css">HTML a CSS</option>
-                <option value="algorithms">Algoritmizace</option>
-              </select>
-              <button class="practice-start-btn" id="startExercises">Spustit</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
   </div><!-- /page-home -->
 

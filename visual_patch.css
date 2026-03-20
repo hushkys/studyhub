@@ -701,15 +701,21 @@
   flex-shrink: 0;
   padding: 10px 10px 14px;
   border-top: 1px solid var(--border);
+  overflow-y: auto;
+  max-height: 55vh;
 }
-.sb-practice-row {
-  display: flex; gap: 6px;
+.sb-practice-label {
+  font-size: 0.6rem; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--text3);
+  padding: 0 4px 8px;
 }
-.sb-practice-btn {
-  flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px;
-  padding: 8px 6px;
-  background: var(--surface2); border: 1px solid var(--border2);
-  border-radius: 8px; color: var(--text2); font-size: 0.78rem; font-weight: 600;
-  cursor: pointer; transition: background .15s, color .15s, border-color .15s;
+.sb-practice-grid {
+  grid-template-columns: 1fr !important;
+  gap: 6px !important;
 }
-.sb-practice-btn:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+.sb-practice-grid .practice-card {
+  padding: 10px 12px !important;
+}
+.sb-practice-grid .practice-card-desc { display: none; }
+.sb-practice-grid .practice-card-icon-wrap { width: 28px !important; height: 28px !important; }
+.sb-practice-grid .practice-card-icon-wrap svg { width: 14px !important; height: 14px !important; }

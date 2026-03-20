@@ -214,6 +214,8 @@
 #sidebarNav {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
 }
 
 .sb-practice-bar {
@@ -701,8 +703,6 @@
   flex-shrink: 0;
   padding: 10px 10px 14px;
   border-top: 1px solid var(--border);
-  overflow-y: auto;
-  max-height: 55vh;
 }
 .sb-practice-label {
   font-size: 0.6rem; font-weight: 700; letter-spacing: 2px;

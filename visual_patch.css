@@ -673,3 +673,16 @@
   .nav-breadcrumb { display: none !important; }
   .nav-notch:not(:has(.nav-notch-bc:empty)) { display: flex; }
 }
+
+/* ---- THEME PICKER TOGGLE ---- */
+.theme-picker-toggle {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%; padding: 8px 12px;
+  background: var(--surface2); border: 1px solid var(--border2);
+  border-radius: 8px; color: var(--text); font-size: 0.85rem;
+  cursor: pointer; transition: background .15s;
+}
+.theme-picker-toggle:hover { background: var(--surface2); filter: brightness(1.15); }
+.theme-picker-toggle svg { transition: transform .2s; }
+.theme-picker-toggle.open svg { transform: rotate(180deg); }
+#themeGrid { margin-top: 8px; }

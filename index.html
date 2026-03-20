@@ -65,31 +65,29 @@
   </div>
   <div class="panel-section">
     <label>Téma</label>
-    <div class="theme-grid" id="themeGrid">
-      <button class="theme-swatch active" data-theme="dark">
-        <div class="swatch-dot" style="background: linear-gradient(135deg,#07070f,#6366f1)"></div>
-        <span class="swatch-label">Tmavé</span>
-      </button>
-      <button class="theme-swatch" data-theme="light">
-        <div class="swatch-dot" style="background: linear-gradient(135deg,#f4f4fc,#4f46e5)"></div>
-        <span class="swatch-label">Světlé</span>
-      </button>
-      <button class="theme-swatch" data-theme="forest">
-        <div class="swatch-dot" style="background: linear-gradient(135deg,#060e08,#22c55e)"></div>
-        <span class="swatch-label">Les</span>
-      </button>
-      <button class="theme-swatch" data-theme="ocean">
-        <div class="swatch-dot" style="background: linear-gradient(135deg,#040d14,#0ea5e9)"></div>
-        <span class="swatch-label">Oceán</span>
-      </button>
-      <button class="theme-swatch" data-theme="sunset">
-        <div class="swatch-dot" style="background: linear-gradient(135deg,#120808,#f97316)"></div>
-        <span class="swatch-label">Západ</span>
-      </button>
-      <button class="theme-swatch" data-theme="rose">
-        <div class="swatch-dot" style="background: linear-gradient(135deg,#fff5f7,#e11d48)"></div>
-        <span class="swatch-label">Růže</span>
-      </button>
+    <button class="theme-picker-toggle" id="themePickerToggle">
+      <span id="themePickerLabel">Tmavé</span>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+    </button>
+    <div class="theme-grid" id="themeGrid" hidden>
+      <button class="theme-swatch active" data-theme="dark"><div class="swatch-dot" style="background:linear-gradient(135deg,#07070f,#6366f1)"></div><span class="swatch-label">Tmavé</span></button>
+      <button class="theme-swatch" data-theme="light"><div class="swatch-dot" style="background:linear-gradient(135deg,#f4f4fc,#4f46e5)"></div><span class="swatch-label">Světlé</span></button>
+      <button class="theme-swatch" data-theme="midnight"><div class="swatch-dot" style="background:linear-gradient(135deg,#000,#a855f7)"></div><span class="swatch-label">Midnight</span></button>
+      <button class="theme-swatch" data-theme="slate"><div class="swatch-dot" style="background:linear-gradient(135deg,#0f172a,#38bdf8)"></div><span class="swatch-label">Slate</span></button>
+      <button class="theme-swatch" data-theme="nordic"><div class="swatch-dot" style="background:linear-gradient(135deg,#1a1f2e,#88c0d0)"></div><span class="swatch-label">Nordic</span></button>
+      <button class="theme-swatch" data-theme="cyber"><div class="swatch-dot" style="background:linear-gradient(135deg,#000a08,#00ff9d)"></div><span class="swatch-label">Cyber</span></button>
+      <button class="theme-swatch" data-theme="crimson"><div class="swatch-dot" style="background:linear-gradient(135deg,#0a0005,#e11d48)"></div><span class="swatch-label">Crimson</span></button>
+      <button class="theme-swatch" data-theme="forest"><div class="swatch-dot" style="background:linear-gradient(135deg,#060e08,#22c55e)"></div><span class="swatch-label">Les</span></button>
+      <button class="theme-swatch" data-theme="ocean"><div class="swatch-dot" style="background:linear-gradient(135deg,#040d14,#0ea5e9)"></div><span class="swatch-label">Oceán</span></button>
+      <button class="theme-swatch" data-theme="amber"><div class="swatch-dot" style="background:linear-gradient(135deg,#0d0800,#f59e0b)"></div><span class="swatch-label">Amber</span></button>
+      <button class="theme-swatch" data-theme="sunset"><div class="swatch-dot" style="background:linear-gradient(135deg,#120808,#f97316)"></div><span class="swatch-label">Západ</span></button>
+      <button class="theme-swatch" data-theme="rose"><div class="swatch-dot" style="background:linear-gradient(135deg,#fff5f7,#e11d48)"></div><span class="swatch-label">Růže</span></button>
+      <button class="theme-swatch" data-theme="lavender"><div class="swatch-dot" style="background:linear-gradient(135deg,#f5f3ff,#7c3aed)"></div><span class="swatch-label">Levandule</span></button>
+      <button class="theme-swatch" data-theme="mint"><div class="swatch-dot" style="background:linear-gradient(135deg,#f0fdf8,#059669)"></div><span class="swatch-label">Mint</span></button>
+      <button class="theme-swatch" data-theme="peach"><div class="swatch-dot" style="background:linear-gradient(135deg,#fff8f4,#ea580c)"></div><span class="swatch-label">Broskev</span></button>
+      <button class="theme-swatch" data-theme="sepia"><div class="swatch-dot" style="background:linear-gradient(135deg,#f8f0e3,#92400e)"></div><span class="swatch-label">Sépia</span></button>
+      <button class="theme-swatch" data-theme="noir"><div class="swatch-dot" style="background:linear-gradient(135deg,#fff,#000)"></div><span class="swatch-label">Bílá/Černá</span></button>
+      <button class="theme-swatch" data-theme="chalk"><div class="swatch-dot" style="background:linear-gradient(135deg,#0a0a0a,#fff)"></div><span class="swatch-label">Černá/Bílá</span></button>
     </div>
   </div>
 </div>

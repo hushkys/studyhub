@@ -72,6 +72,9 @@ function setTheme(th) {
   S.theme = th; localStorage.setItem('theme', th);
   document.documentElement.setAttribute('data-theme', th);
   document.querySelectorAll('.theme-swatch').forEach(b => b.classList.toggle('active', b.dataset.theme === th));
+  const active = document.querySelector(`.theme-swatch[data-theme="${th}"] .swatch-label`);
+  const lbl = document.getElementById('themePickerLabel');
+  if (lbl && active) lbl.textContent = active.textContent;
 }
 
 // ---- COUNTDOWN WIDGET ----
@@ -1754,11 +1757,24 @@ function setupEvents() {
   document.querySelectorAll('.density-btn').forEach(b => b.addEventListener('click', () => setDensity(b.dataset.density)));
   document.getElementById('themeBtn').addEventListener('click', () => {
     // cycle through themes
-    const themes = ['dark','light','forest','ocean','sunset','rose'];
+    const themes = ['dark','light','midnight','slate','nordic','cyber','crimson','forest','ocean','amber','sunset','rose','lavender','mint','peach','sepia','noir','chalk'];
     const next = themes[(themes.indexOf(S.theme) + 1) % themes.length];
     setTheme(next);
   });
-  document.querySelectorAll('.theme-swatch').forEach(b => b.addEventListener('click', () => setTheme(b.dataset.theme)));
+  document.querySelectorAll('.theme-swatch').forEach(b => b.addEventListener('click', () => {
+    setTheme(b.dataset.theme);
+    const lbl = document.getElementById('themePickerLabel');
+    if (lbl) lbl.textContent = b.querySelector('.swatch-label').textContent;
+  }));
+  const themeToggle = document.getElementById('themePickerToggle');
+  const themeGrid = document.getElementById('themeGrid');
+  if (themeToggle && themeGrid) {
+    themeToggle.addEventListener('click', () => {
+      const open = !themeGrid.hidden;
+      themeGrid.hidden = open;
+      themeToggle.classList.toggle('open', !open);
+    });
+  }
 
   window.addEventListener('scroll', () => {
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);

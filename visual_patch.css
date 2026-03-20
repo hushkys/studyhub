@@ -643,7 +643,7 @@
 
 /* ---- MOBILE BREADCRUMB NOTCH ---- */
 .nav-notch {
-  display: none; /* shown only on mobile via media query */
+  display: none;
   position: absolute;
   bottom: 0; left: 50%; transform: translate(-50%, 100%);
   background: var(--glass);
@@ -654,7 +654,6 @@
   border-radius: 0 0 16px 16px;
   padding: 4px 14px 6px;
   z-index: 199;
-  pointer-events: auto;
   box-shadow: 0 4px 16px rgba(0,0,0,.18);
 }
 
@@ -667,5 +666,10 @@
   max-width: 110px; padding: 2px 6px; font-size: 0.7rem;
 }
 
-.nav-notch:empty,
+.nav-notch-bc:empty + .nav-notch,
 .nav-notch-bc:empty { display: none !important; }
+
+@media (max-width: 640px) {
+  .nav-breadcrumb { display: none !important; }
+  .nav-notch:not(:has(.nav-notch-bc:empty)) { display: flex; }
+}

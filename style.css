@@ -1808,7 +1808,6 @@ mark { background: rgba(99,102,241,.2); color: var(--text); border-radius: 2px; 
   .page-hero-title { font-size: 1.3rem; letter-spacing: -.5px; }
   .navbar-inner { padding: 0 12px; }
   .nav-breadcrumb { display: none; }
-  .nav-notch { display: flex; }
   .hero-scroll-hint { display: none; }
   .hero-h1 { letter-spacing: -2px; }
   .hero-stats { gap: 14px; }

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=vzdalenost
+comment0.target=void\ posunDol\u016F(int)
+comment1.params=vzdalenost
+comment1.target=void\ posunVpravo(int)
+comment2.params=x\ y
+comment2.target=void\ setPozice(int,\ int)
+numComments=3

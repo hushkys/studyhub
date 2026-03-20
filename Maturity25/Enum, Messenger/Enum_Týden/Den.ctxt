@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Den
+comment1.params=odK\ doK\ pzn
+comment1.target=Den(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getRozvrh()
+comment3.params=odKdy\ doKdy\ pzn
+comment3.target=void\ pridejTermin(java.lang.String,\ java.lang.String,\ java.lang.String)
+numComments=4

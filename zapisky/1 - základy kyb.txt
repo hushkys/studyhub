@@ -1,0 +1,129 @@
+﻿1 - základy kyb. bezpečnosti
+neděle 4. ledna 2026
+16:29
+ 
+obor informatiky, který se zabývá Procesy, ochranou počítačových systémů a sítí před neoprávněným přístupem k systémům – informacím, a před počítačovou kriminalitou – krádeží nebo poškozením hardwaru, softwaru nebo elektronických údajů, jakož i před narušením nebo zneužitím poskytovaných služeb, před kybernetickým útokem. Hlavním cílem je zajistit spolehlivost, integritu a soukromí údajů systému.
+ 
+Vyskytuje se ve všech odvětví
+ 
+Proces – princip řízení, neboli algoritmus
+ 
+Ochrana aktiv
+Dělení aktiv 
+· Hmotné
+· Nehmotné
+o Primární - např. osobní údaje, dovednosti 
+o Podpůrné - např. Suroviny v kofole, zaměstnanci ve firmě
+o Technické - např. Server, síť, celá infrastruktura
+ 
+Zpětná vazba - výstup zpětně ovliňuje jeho vstup (zpětná kontrola dat, případná náprava)
+ 
+Počítačová ochrana ve třech krocích: 
+· prevence – ochrana před hrozbami (riziky) 
+· detekce – odhalení neoprávněných činností a slabých míst v systému 
+· náprava – odstranění slabých míst v systému
+ 
+MODEL - slouží k testování aktualizací např
+· Zmenšenina reálného stroje, má stejné nebo podobné chování a systém
+· Slouží k testování aktualizací, softwareu, hardwareru před nasazením do ostrého stroje
+ 
+KYBERNETICKÁ HROZBA
+· Příčina bezpečnostní události nebo incidentu
+· Výsledkem může být požkození aktiva 
+ 
+RIZIKO
+· Možnost, že hrozba využije zranitenlosti systému a nakonec způsobí poškození aktiva
+ 
+BEZPEČNOSTNÍ / FIREMNÍ POLITIKA
+· Soubor zásad a pravidel, které určují způsob zajištění ochrany aktiv orgánem a osobou
+· Cílem ochrana aktiva
+ 
+Událost může způsobit narušení aktiva, Incident je narušení aktiva
+ 
+Počítačová bezpečnost, zabezpečení informací v počítačích, tj. odhalení a zmenšení rizik spojených s používáním počítače, zahrnuje: 
+· Fyzická bezpečnost – omezení přístupu k počítačům a ochraně zařízení před manipulací
+· Řízení přístupu – přístup pouze pro oprávněné osoby podle bezpečnostních pravidel
+· Ochrana dat – ochrana proti krádeži, kopírování a poškození dat (včetně hardwarových klíčů)
+· Bezpečné chování programů – využití bezpečnostních mechanismů operačního systému
+· Minimalizace důvěry – omezení počtu programů, kterým je nutné důvěřovat
+· Evidence změn – logování a verzování systémů a programů
+· Zabezpečení OS – využití vestavěných bezpečnostních funkcí operačního systému
+· Šifrování – bezpečná komunikace a přenos dat pomocí kryptografie
+· Zálohování – bezpečné ukládání a pravidelné zálohování dat
+· Řešení incidentů – plán reakce na bezpečnostní incidenty a útoky
+· AAA + integrita – zajištění autentizace, autorizace a integrity dat
+ 
+Zranitelnosti
+· Zranitelností chápeme citlivá místa či nedostatky systému, správa slabých míst je opakující se praxe identifikace, třídění, nápravy a zmírnění zranitelností, když jsou objeveny.
+· Využitelnou zranitelností chápeme takovou zranitelnost, pro kterou existuje alespoň jeden fungující útok nebo "Exploit"
+· Kategorie hrozeb:
+o Backdoors 
+§ metoda obcházení normální kontroly pro ověření a zabezpečení
+§ Mohou vzniknout díky špatné konfiguraci, úmyslně přidaná developerem, útočníkem
+o Denial of Service
+§ útoky navrženy tak, aby zařízení nebo síťové zdroje byly nedostupné pro jeho plánované uživatele
+o Přímý přístup
+§ Neoprávněný uživatel, který získá fyzický přístup k počítači, je s největší pravděpodobností z něj schopen přímo kopírovat data.
+o Odposlech 
+§ poslouchání soukromých rozhovorů, typicky mezi hosty v síti
+o Spoofing
+§ Padělání
+§ komunikace odeslána z neznámého zdroje, který se tváří jako zdroj známý přijímači
+o Zasahování
+§ popisuje škodlivou modifikaci produktů nebo dat
+o Phishing
+§ snaha získat citlivé informace, jako jsou uživatelská jména, hesla či informace o kreditní kartě, přímo od uživatelů
+o Zero day
+§  označení pro zranitelnosti softwaru, které jsou odhaleny ještě před vydáním aktualizace
+o Clickjacking
+§ technika ve kterém útočník oklame uživatele, aby kliknul na tlačítko nebo odkaz na webovou stránku, zatímco uživatel měl v úmyslu kliknout na vrchní úroveň stránky
+o Sociální inženýrství
+§ snaha přesvědčit uživatele, aby dobrovolně prozradil své citlivé údaje, například hesla pro přístup k soukromým službám
+o Malware
+o Krádež identity
+o Brute force
+ 
+CIA, zápis u jiné otázky
+Confidentiality (důvěrnost) – data jsou dostupná pouze oprávněným osobám
+Integrity (integrita) – data nejsou neoprávněně měněna
+Availability (dostupnost)  – data a služby jsou dostupné, když je potřebujeme
+ 
+Úrovně zabezpečení
+
+ 
+Opatření:
+· Silná hesla
+· Více faktorové ověření
+· Antivir
+· Pravidelné aktualizace
+· Zálohování dat
+· Detekce útoků - IDS
+· Šifrování komunikace
+· Firewall
+· VLAN 
+· VPN
+ 
+Firewall
+· síťové zařízení, které slouží k řízení a zabezpečování síťového provozu mezi sítěmi s různou úrovní důvěryhodnosti a zabezpečení
+· Slouží jako kontrolní bod
+· Kategorie
+o Packetové filtry
+o Aplikační brány
+o Stavové packetové filtry
+o Stavové packetové filtry s IDS
+· Síťový firewall - samostatné hardwarové řešení pro ochranu počítačové sítě
+· Personální firewall - realizovaný na koncových stanicích (pc)
+ 
+Autentizace, autorizace a audit
+· Autentizace – ověření identity uživatele
+· Autorizace – přidělení oprávnění
+· Audit – záznam a kontrola činností
+ 
+Reakce na bezpečnostní incident
+· identifikace incidentu
+· Izolace problému
+· odstranění hrozby
+· obnova systému
+· vyhodnocení incidentu
+ 
+ 

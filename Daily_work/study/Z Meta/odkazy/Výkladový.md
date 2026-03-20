@@ -1,0 +1,3 @@
+- vysvětluje podstatu jevu, nejenom jeho vnější znaky
+- naznačuje souvislosti a příčinné jevy
+- např. referát, výklad, encyklopedické heslo

@@ -1,0 +1,28 @@
+﻿4 - revitalizace
+pátek 13. března 2026
+8:56
+ 
+Revitalizace - obnovení stavu sítě do původní podoby po kybernetickém incidentu
+Počítačová síť - propojení dvou a více zařízení za účelem komunikace, sdílení dat a hardwareu
+Druhy PS 
+· P2P
+· Klient server
+ 
+Vysvětlit co je kybernetický útok, incident, hrozba
+ 
+Revitalizace sítě po ransomware útoku
+· Zjistit v jakém stavu jsou zálohy, popř izolovat infikované sítě
+· Diagnostika a zjištění poškozené sítě - zvolení správného procesu pro obnovu
+· Izolace nakažených počítačů
+· Nahlášení NÚKIBu (dává návrhy k řešení
+· Odpojení a Kompletní reinstalace, použití záloh
+· Po kompletní obnově zařízení, lze zařízení připojit zpět to zdravého segmentu
+· Obnova méně důležitých zařízení
+· Analýza dat (od kud, kdo, siems systémy, log management..)
+· Návrh řešení zabezpečení (nutné odsouhlasení managera kybernetické bezpečnosti ve firmě)
+· Aplikace bezpečnostního návrhu
+· Aktualizace procesu (checklistu) na aktuální hrozbu
+· Nahlásit NÚKIBu že problém je vyřešen
+· Proškolení zaměstnanců
+· Penetrační test,  provést fake útok na zaměstnance
+ 

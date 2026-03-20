@@ -1,0 +1,177 @@
+17 - Bezpecnost v sítích - DODELAT
+streda 28. ledna 2026
+19:14
+ 
+ 
+> digitální stopa
+- to co posobe zanecháváme na internetu
+ 
+- rozdelení:
+- Vedomé/Nevedomé 
+- verejná/neverejná a skrytá
+ 
+- meta data ( data obsahující data ojiných datech pr. fotka )
+- mailové hlavicky:obsahují data odesílatele 
+- sledovací pixel (webový maják)
+. umožnuje odesílately emailu overit zdajste email otevreli a kolikrát
+. po otevrení emailu se stáhne do vašeho pocítace, a jde zjistit
+   spoustu informací o vás, aby se mohl stáhnout potrebuje abyste poskytli
+   serveru vaší IP adresu. Používán korporáty pro zjištování informací.
+ 
+- jak minimalizovat stopy
+  . stopa nikdy nebude úplne nulová
+  . používání anonymních vyhledávacu ci VPN
+  . nepovolovat cookies (mazat je)
+  . používat console plain text (proti webovým majákum)
+  . vypnout automatické stahování obrázku 
+  
+ 
+- Bezpecnost v pocítacových sítích se zabývá ochranou dat, zarízení a služeb 
+   pred neoprávneným prístupem, zneužitím, poškozením nebo znicením. V oboru 
+   je klícová, protože vetšina komunikace a práce s daty probíhá práve pres síte.
+ 
+> Cílem sítové bezpecnosti je zajistit tzv. CIA triádu:
+ 
+Confidentiality (duvernost) - data jsou dostupná pouze oprávneným osobám
+Integrity (integrita) - data nejsou neoprávnene menena
+Availability (dostupnost)  - data a služby jsou dostupné, když je potrebujeme
+ 
+> Hrozby v pocítacových sítích
+.Malware - škodlivý software (viry, cervi, trojské kone, ransomware)
+.Phishing - podvodné získávání citlivých údaju (hesla, císla karet)
+.DoS / DDoS útoky - zahlcení serveru tak, aby nebyl dostupný
+.Man-in-the-Middle (MitM) - útocník odposlouchává nebo mení komunikaci
+.Brute-force útoky - zkoušení hesel
+.Sociální inženýrství - manipulace uživatele (napr. vydávání se za admina)
+ 
+> Vnitrní a vnejší hrozby
+Vnejší hrozby - útocníci z internetu
+Vnitrní hrozby - zamestnanci, studenti, špatne nastavená práva
+ 
+ 
+> Základní bezpecnostní prvky v sítích
+ 
+- Firewall
+.je hardwarové nebo softwarové zarízení které slouží k inspekci paketu.
+.je schopen pakety do síte pustir a nebo je zakázat.
+.je schopný reagovat na císlo portu, IP adresu, doménový název a aplikace.
+.filtruje sítový provoz
+.povoluje nebo blokuje komunikaci podle pravidel
+.Typy firewallu:
+Packet filtering firewall - filtruje podle IP adres a portu
+Stateful firewall - sleduje stav spojení
+Application firewall - kontroluje konkrétní aplikace
+ 
+ 
+- IDS a IPS
+.IDS (Intrusion Detection System)** - detekuje útoky, upozornuje
+.IPS (Intrusion Prevention System)** - aktivne blokuje útoky
+Používají se k ochrane síte pred známými i neznámými útoky.
+ 
+ 
+> Šifrování v sítích
+.Šifrování zajištuje duvernost a integritu dat pri prenosu po síti.
+.Typy šifrování
+Symetrické šifrování - stejný klíc pro šifrování i dešifrování (AES)
+Asymetrické šifrování - verejný a soukromý klíc (RSA)
+.Šifrované protokoly
+HTTPS (HyperText Transfer Protocol Secure)
+SSH (Secure Shell)
+VPN (Virtual Private Network)
+ 
+ 
+> SSL / TLS (Secure Sockets Layer / Transport Layer Security)
+ 
+.SSL a TLS jsou **kryptografické protokoly**, které zajištují bezpecnou komunikaci
+v pocítacových sítích. Dnes se používá predevším **TLS**, SSL je považováno za zastaralé.
+ 
+TLS poskytuje:
+ 
+* šifrování dat
+* autentizaci serveru (prípadne i klienta)
+* integritu prenášených dat
+ 
+---
+ 
+5.2 Digitální certifikáty
+ 
+TLS využívá **digitální certifikáty**, které:
+ 
+* vydává certifikacní autorita (CA)
+* obsahují verejný klíc serveru
+* potvrzují identitu serveru
+ 
+Príklady certifikacních autorit:
+ 
+* Let's Encrypt
+* DigiCert
+* GlobalSign
+ 
+---
+ 
+5.3 TLS handshake (zjednodušene)
+ 
+1. Klient se pripojí k serveru
+2. Server pošle certifikát
+3. Klient overí certifikát u CA
+4. Probehne výmena klícu
+5. Naváže se šifrovaná komunikace
+ 
+TLS se používá napr. u:
+ 
+* HTTPS
+* FTPS
+* SMTPS
+ 
+---
+ 
+ 6. Autentizace a autorizace
+ 
+ 5.1 Autentizace
+ 
+Overení identity uživatele:
+ 
+* Heslo
+* Cipová karta
+* Biometrie
+* **Vícefaktorová autentizace (MFA)** - kombinace více faktoru
+ 
+5.2 Autorizace
+ 
+* Urcuje, **co muže uživatel delat**
+* Prístupová práva, role (RBAC)
+ 
+---
+ 
+6. Bezpecnost sítových zarízení
+  6.1 Routery a switche
+ 
+* Zmena výchozích hesel
+* Aktualizace firmwaru
+* Vypnutí nepoužívaných služeb
+* Segmentace síte (VLAN)
+ 
+### 6.2 Wi-Fi bezpecnost
+ 
+* Šifrování **WPA2 / WPA3**
+* Silné heslo
+* Skrytí SSID (doplnek, ne hlavní ochrana)
+* Oddelení hostovské síte
+ 
+---
+ 7. Zálohování a dostupnost
+ 
+* Pravidelné zálohování dat
+* Offline a cloudové zálohy
+* Ochrana proti ransomwaru
+* Plán obnovy po havárii (Disaster Recovery Plan)
+ 
+--
+ 
+* Bezpecnostní smernice
+* Školení uživatelu
+* Silná hesla a jejich správa
+* Neotevírat podezrelé odkazy a prílohy
+ 
+Clovek je casto **nejslabší clánek bezpecnosti**.
+ 

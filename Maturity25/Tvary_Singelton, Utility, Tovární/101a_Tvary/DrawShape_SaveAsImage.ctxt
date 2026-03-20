@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=DrawShape_SaveAsImage
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=event
+comment2.target=void\ windowClosing(java.awt.event.WindowEvent)
+comment3.params=g
+comment3.target=void\ paint(java.awt.Graphics)
+comment4.params=canvas
+comment4.target=void\ saveCanvas(java.awt.Canvas)
+numComments=5

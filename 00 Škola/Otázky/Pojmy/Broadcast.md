@@ -1,0 +1,5 @@
+**všeobecný oběžník**
+- je v informatice zpráva, kterou v počítačové síti přijmou všechna síťová rozhraní. Pomocí broadcastů se v současným sítích šíří například informace o sdílení v sítích Microsoft nebo identifikace zařízení. Pokud není síť vhodným způsobem rozdělena na podsítě nebo chráněna firewallem, mohou broadcasty způsobit zahlcení sítě.
+### typy broadcastů
+- **MAC broadcast**
+	- speciální adresa pro poslání všem zařízením. K adresaci rámce, který má být odeslán jako MAC broadcast, se používá speciální MAC adresa ve tvaru „FF:FF:FF:FF:FF:FF“. Takový datový rámec je přijat všemi síťovými zařízeními, která jsou připojena ke stejnému segmentu sítě, do kterého patří zdroj odchozího paketu. Takový segment ohraničuje router, který lokální broadcast dále nepropustí (projde ale skrz switch i hub).

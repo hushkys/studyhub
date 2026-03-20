@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Prepravka
+comment0.text=\r\n\ Instance\ t\u0159\u00EDdy\ {@code\ P\u0159epravka}\ p\u0159edstavuj\u00ED\ ...\r\n\r\n\ @author\ \ \ \ jm\u00E9no\ autora\r\n\ @version\ \ \ 0.00.000\r\n
+comment1.params=jmeno\ prijmeni\ rocnik\ obor\ intr
+comment1.target=Prepravka(java.lang.String,\ java.lang.String,\ int,\ java.lang.String,\ boolean)
+numComments=2

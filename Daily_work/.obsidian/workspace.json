@@ -1,0 +1,211 @@
+{
+  "main": {
+    "id": "282f1c30bbf9b424",
+    "type": "split",
+    "children": [
+      {
+        "id": "3ca032fa045dcf2a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "03f3d892c1e75d5c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "study/Maturita/SVĚTOVÁ LITERATURA 20. A 21. STOLETÍ.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SVĚTOVÁ LITERATURA 20. A 21. STOLETÍ"
+            }
+          },
+          {
+            "id": "5a7f6f9a6413edec",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "study/Dashboard.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Dashboard"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f3e16abb28021a8c",
+    "type": "split",
+    "children": [
+      {
+        "id": "c31f514b8635aa05",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1fbebb072126721e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "bafae66cea814df0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "ea9fa8a7d8021944",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1a605e1f4dba06b7",
+    "type": "split",
+    "children": [
+      {
+        "id": "e9370e5aa96f684e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "84eec33f79a27289",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "study/Maturita/SVĚTOVÁ A ČESKÁ LITERATURA 19. STOLETÍ - MINIMÁLNĚ 3 TITULY.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for SVĚTOVÁ A ČESKÁ LITERATURA 19. STOLETÍ - MINIMÁLNĚ 3 TITULY"
+            }
+          },
+          {
+            "id": "3cd167324f900f01",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "study/Maturita/SVĚTOVÁ A ČESKÁ LITERATURA 19. STOLETÍ - MINIMÁLNĚ 3 TITULY.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from SVĚTOVÁ A ČESKÁ LITERATURA 19. STOLETÍ - MINIMÁLNĚ 3 TITULY"
+            }
+          },
+          {
+            "id": "b8a74ec00eedea81",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "281930140a472a8d",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "bf1539d153459f61",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "study/Maturita/SVĚTOVÁ A ČESKÁ LITERATURA 19. STOLETÍ - MINIMÁLNĚ 3 TITULY.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of SVĚTOVÁ A ČESKÁ LITERATURA 19. STOLETÍ - MINIMÁLNĚ 3 TITULY"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "03f3d892c1e75d5c",
+  "lastOpenFiles": [
+    "study/Dashboard.md",
+    "study/Maturita/Šablona.md",
+    "Microsoft pro školství AI.md",
+    "study/Maturita/SVĚTOVÁ LITERATURA 20. A 21. STOLETÍ.md",
+    "study/Maturita/SVĚTOVÁ A ČESKÁ LITERATURA 19. STOLETÍ - MINIMÁLNĚ 3 TITULY.md",
+    "study/Z Meta/town.gif",
+    "study/Z Meta/winter_day.gif",
+    "study/Maturita/X Šablona.md"
+  ]
+}

@@ -1,0 +1,2 @@
+- nejjednodušší, podává fakta ve věcných souvislostech (místo, čas)
+- např. osobní dopis, pozvánka

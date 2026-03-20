@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Employee
+comment1.params=name\ age
+comment1.target=Employee(java.lang.String,\ int)
+comment1.text=\r\n\ Abstraktni\ tridy\ samozrejme\ maji\ konstruktor,\ aby\ sly\ zinicializovat\r\n\ jejich\ fieldy\r\n\ @param\ name\ jmeno\ zamestnance\r\n\ @param\ age\ vek\ zamestnance\r\n
+comment2.params=
+comment2.target=void\ work()
+comment2.text=\r\n\ Necha\ zamestnance\ pracovat.\r\n\ Tato\ metoda\ je\ abstraktni\ -\ nema\ telo,\ jeji\ implementace\ bude\ vynucena\r\n\ v\ prvni\ neabstraktni\ tride,\ ktera\ oddedi\ tuto\ tridu.\r\n
+comment3.params=
+comment3.target=void\ sayHello()
+comment3.text=\r\n\ Abstrakni\ tridy\ taktez\ mohou\ mit\ neabstraktni\ metody\r\n
+comment4.params=
+comment4.target=int\ getAge()
+comment4.text=\r\n\ @return\ the\ age\r\n
+comment5.params=age
+comment5.target=void\ setAge(int)
+comment5.text=\r\n\ @param\ age\ the\ age\ to\ set\r\n
+comment6.params=
+comment6.target=java.lang.String\ getName()
+comment6.text=\r\n\ @return\ the\ name\r\n
+comment7.params=name
+comment7.target=void\ setName(java.lang.String)
+comment7.text=\r\n\ @param\ name\ the\ name\ to\ set\r\n
+numComments=8

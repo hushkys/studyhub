@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=DomMain
+comment1.params=arg
+comment1.target=void\ main(java.lang.String[])
+comment2.params=out
+comment2.target=void\ test(java.io.PrintWriter)
+comment3.params=e
+comment3.target=java.lang.String\ getText(org.w3c.dom.Element)
+numComments=4

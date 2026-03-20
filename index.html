@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="cs" data-theme="dark" data-font-size="md">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maturita 2026 — Study Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="visual_patch.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <div class="nav-left">
+      <button class="hamburger" id="sidebarToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="nav-logo" href="#" id="logoLink">
+        <span>Study<em>Hub</em></span>
+      </a>
+    </div>
+    <nav class="nav-breadcrumb" id="navBreadcrumb"></nav>
+    <div class="nav-right">
+      <button class="icon-btn" id="searchToggle" aria-label="Hledat">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <button class="icon-btn" id="themeBtn" aria-label="Téma">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 1 0 20"/><path d="M12 2v20M2 12h20" opacity=".3"/><circle cx="12" cy="12" r="3" fill="currentColor" stroke="none"/></svg>
+      </button>
+      <button class="icon-btn" id="accessBtn" aria-label="Nastavení">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="search-bar" id="searchBar">
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="searchInput" placeholder="Hledat v obsahu..." autocomplete="off">
+      <button class="search-close-btn" id="searchClose" aria-label="Zavřít hledání">✕</button>
+      <kbd>ESC</kbd>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</header>
+
+<!-- ACCESSIBILITY PANEL -->
+<div class="panel" id="accessPanel">
+  <div class="panel-header">
+    <span>Nastavení</span>
+    <button class="panel-close" id="accessClose">✕</button>
+  </div>
+  <div class="panel-section">
+    <label>Velikost textu</label>
+    <div class="size-row">
+      <button class="size-btn" data-size="sm">A<small>sm</small></button>
+      <button class="size-btn active" data-size="md">A<small>md</small></button>
+      <button class="size-btn" data-size="lg">A<small>lg</small></button>
+      <button class="size-btn" data-size="xl">A<small>xl</small></button>
+    </div>
+  </div>
+  <div class="panel-section">
+    <label>Téma</label>
+    <div class="theme-grid" id="themeGrid">
+      <button class="theme-swatch active" data-theme="dark">
+        <div class="swatch-dot" style="background: linear-gradient(135deg,#07070f,#6366f1)"></div>
+        <span class="swatch-label">Tmavé</span>
+      </button>
+      <button class="theme-swatch" data-theme="light">
+        <div class="swatch-dot" style="background: linear-gradient(135deg,#f4f4fc,#4f46e5)"></div>
+        <span class="swatch-label">Světlé</span>
+      </button>
+      <button class="theme-swatch" data-theme="forest">
+        <div class="swatch-dot" style="background: linear-gradient(135deg,#060e08,#22c55e)"></div>
+        <span class="swatch-label">Les</span>
+      </button>
+      <button class="theme-swatch" data-theme="ocean">
+        <div class="swatch-dot" style="background: linear-gradient(135deg,#040d14,#0ea5e9)"></div>
+        <span class="swatch-label">Oceán</span>
+      </button>
+      <button class="theme-swatch" data-theme="sunset">
+        <div class="swatch-dot" style="background: linear-gradient(135deg,#120808,#f97316)"></div>
+        <span class="swatch-label">Západ</span>
+      </button>
+      <button class="theme-swatch" data-theme="rose">
+        <div class="swatch-dot" style="background: linear-gradient(135deg,#fff5f7,#e11d48)"></div>
+        <span class="swatch-label">Růže</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-top">
+    <span class="sidebar-label">Navigace</span>
+    <button class="sidebar-close" id="sidebarClose">✕</button>
+  </div>
+  <nav id="sidebarNav"></nav>
+</aside>
+<div class="backdrop" id="backdrop"></div>
+
+<!-- PAGES -->
+<main id="app">
+
+  <!-- HOME -->
+  <div class="page active" id="page-home">
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <canvas class="hero-canvas" id="heroCanvas"></canvas>
+      <div class="hero-orbs" aria-hidden="true">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+        <div class="hero-orb hero-orb-4"></div>
+        <div class="hero-orb hero-orb-5"></div>
+      </div>
+      <div class="hero-chips" aria-hidden="true">
+        <div class="hero-chip" style="--d:0s;--x:12%;--y:22%">KYB</div>
+        <div class="hero-chip" style="--d:.4s;--x:82%;--y:18%">PRG</div>
+        <div class="hero-chip" style="--d:.8s;--x:88%;--y:68%">ČJ</div>
+        <div class="hero-chip" style="--d:.2s;--x:6%;--y:72%">MAT</div>
+        <div class="hero-chip" style="--d:1.1s;--x:50%;--y:88%">ANG</div>
+      </div>
+      <div class="hero-content" id="heroContent">
+        <div class="hero-eyebrow">Maturitní příprava 2025/2026</div>
+        <h1 class="hero-h1">Study<em>Hub</em></h1>
+        <p class="hero-desc" id="heroDesc"></p>
+        <div class="hero-stats">
+          <div class="hero-stat"><span class="hero-stat-val" id="heroTopicCount">—</span><span class="hero-stat-label">témat</span></div>
+          <div class="hero-stat-div"></div>
+          <div class="hero-stat"><span class="hero-stat-val">5</span><span class="hero-stat-label">předmětů</span></div>
+          <div class="hero-stat-div"></div>
+          <div class="hero-stat"><span class="hero-stat-val">2026</span><span class="hero-stat-label">maturita</span></div>
+        </div>
+        <div class="hero-cta-row">
+          <button class="hero-cta-btn" id="heroScrollBtn">Začít studovat</button>
+          <button class="hero-cta-ghost" id="heroQuizBtn">Spustit kvíz</button>
+        </div>
+      </div>
+      <div class="hero-scroll-hint">
+        <span>Scroll</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN SECTION -->
+    <section class="section reveal" id="countdownSection">
+      <div class="section-inner">
+        <div class="section-label">Termíny maturit</div>
+        <div class="countdown-widget" id="countdownWidget">
+          <div class="cd-tabs" id="cdTabs"></div>
+          <div class="cd-display" id="cdDisplay"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES SECTION -->
+    <section class="section reveal" id="subjectsSection">
+      <div class="section-inner">
+        <div class="section-label">Předměty</div>
+        <div class="cat-cards" id="catCards"></div>
+      </div>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker-wrap reveal">
+      <div class="ticker-track" id="tickerTrack"></div>
+    </div>
+
+    <!-- PRACTICE SECTION -->
+    <section class="section reveal" id="practiceSection">
+      <div class="section-inner">
+        <div class="section-label">Procvičování</div>
+        <div class="practice-grid">
+          <div class="practice-card" id="quizLauncher">
+            <div class="practice-card-icon-wrap" style="--c:#6366f1">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+            </div>
+            <div class="practice-card-title">Kvíz</div>
+            <div class="practice-card-desc">Náhodné otázky z teorie. 5 možností, okamžitá zpětná vazba.</div>
+            <div class="diff-selector" style="margin-bottom:10px;">
+              <span style="font-size:0.65rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;font-weight:700;">Obtížnost:</span>
+              <button class="diff-btn active all" data-diff="all">Vše</button>
+              <button class="diff-btn easy" data-diff="easy">Lehká</button>
+              <button class="diff-btn medium" data-diff="medium">Střední</button>
+              <button class="diff-btn hard" data-diff="hard">Těžká</button>
+            </div>
+            <div class="practice-card-footer">
+              <select class="practice-select" id="quizCatSelect">
+                <option value="kyb">KYB</option>
+                <option value="prg">PRG</option>
+                <option value="ces">Čeština</option>
+                <option value="mat">Matematika</option>
+              </select>
+              <button class="practice-start-btn" id="startQuiz">Spustit</button>
+            </div>
+          </div>
+          <div class="practice-card" id="exercisesLauncher">
+            <div class="practice-card-icon-wrap" style="--c:#10b981">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div class="practice-card-title">Cvičení — PRG</div>
+            <div class="practice-card-desc">Drag &amp; drop, doplňování a řazení kódu. 150 cvičení v 10 tématech.</div>
+            <div class="diff-selector" style="margin-bottom:10px;">
+              <span style="font-size:0.65rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;font-weight:700;">Obtížnost:</span>
+              <button class="diff-btn active all" data-diff-ex="all">Vše</button>
+              <button class="diff-btn easy" data-diff-ex="easy">Lehká</button>
+              <button class="diff-btn medium" data-diff-ex="medium">Střední</button>
+              <button class="diff-btn hard" data-diff-ex="hard">Těžká</button>
+            </div>
+            <div class="practice-card-footer">
+              <select class="practice-select" id="exTopicSelect">
+                <option value="all">Všechna témata</option>
+                <option value="java-basics">Základy Java/C#</option>
+                <option value="oop">OOP principy</option>
+                <option value="methods">Metody tříd</option>
+                <option value="constructors">Konstruktory</option>
+                <option value="interfaces">Rozhraní a abstrakce</option>
+                <option value="collections">Kolekce a generika</option>
+                <option value="design-patterns">Návrhové vzory</option>
+                <option value="sql">SQL databáze</option>
+                <option value="html-css">HTML a CSS</option>
+                <option value="algorithms">Algoritmizace</option>
+              </select>
+              <button class="practice-start-btn" id="startExercises">Spustit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /page-home -->
+
+  <!-- CATEGORY PAGE -->
+  <div class="page" id="page-category">
+    <div class="page-hero">
+      <div class="page-hero-bg" id="catHeroBg"></div>
+      <div class="page-hero-orbs">
+        <div class="ph-orb ph-orb-1"></div>
+        <div class="ph-orb ph-orb-2"></div>
+      </div>
+      <div class="page-hero-content">
+        <button class="back-link" id="backFromCat">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+          Zpět
+        </button>
+        <h1 id="catTitle" class="page-hero-title"></h1>
+        <p id="catDesc" class="page-hero-desc"></p>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-inner">
+        <div class="topic-list" id="topicList"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOPIC PAGE -->
+  <div class="page" id="page-topic">
+    <div class="page-hero">
+      <div class="page-hero-bg" id="topicHeroBg"></div>
+      <div class="page-hero-orbs">
+        <div class="ph-orb ph-orb-1"></div>
+        <div class="ph-orb ph-orb-2"></div>
+      </div>
+      <div class="page-hero-content">
+        <div class="topic-hero-row">
+          <button class="back-link" id="backFromTopic">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+            Zpět
+          </button>
+          <div class="topic-badge" id="topicBadge"></div>
+        </div>
+        <h1 id="topicTitle" class="page-hero-title"></h1>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-inner topic-layout">
+        <div class="topic-main" id="topicMain"></div>
+        <aside class="topic-aside" id="topicAside"></aside>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAME BACKGROUND CANVAS -->
+  <canvas class="game-bg-canvas" id="gameBgCanvas"></canvas>
+
+  <!-- EXERCISES PAGE -->
+  <div class="page" id="page-exercises">
+    <div class="section">
+      <div class="section-inner">
+        <div class="practice-header">
+          <button class="back-link" id="backFromExercises">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+            Zpět
+          </button>
+          <div class="practice-title">Cvičení</div>
+          <div class="practice-progress" id="exProgress">1 / 12</div>
+        </div>
+        <div class="ex-wrap" id="exWrap"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUIZ PAGE -->
+  <div class="page" id="page-quiz">
+    <div class="section">
+      <div class="section-inner">
+        <div class="practice-header">
+          <button class="back-link" id="backFromQuiz">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+            Zpět
+          </button>
+          <div class="practice-title">Kvíz</div>
+          <div class="diff-selector" id="quizDiffDisplay"></div>
+          <div class="practice-progress" id="quizProgress">1 / 10</div>
+        </div>
+        <div class="quiz-wrap" id="quizWrap"></div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="data.js"></script>
+<script src="prg_code.js"></script>
+<script src="tips.js"></script>
+<script src="exercises.js"></script>
+<script src="quiz_questions.js"></script>
+<script src="app.js"></script>
+
+<!-- GLOSSARY TOOLTIP -->
+<div id="glossaryTooltip" role="tooltip" aria-live="polite">
+  <div class="tooltip-header">
+    <span class="tooltip-term"></span>
+    <button class="tooltip-close" aria-label="Zavřít">✕</button>
+  </div>
+  <div class="tooltip-def"></div>
+</div>
+</body>
+</html>

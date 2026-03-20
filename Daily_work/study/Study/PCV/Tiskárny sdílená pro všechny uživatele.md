@@ -1,0 +1,7 @@
+- K serveru připojte iso soubor s názvem (**maturita-new**) 
+- Nainstalujte si PDFCreator 1.7.1 
+- po spuštění exe. souboru odklikněte že chcete expert setting, a nastavení pro server
+- po vytvoření tiskárny ji v ovládacím panelu sdílejte 
+- poté se přihlaste na libovolného uživatele a v Ovládací *panel>zařízení>přidat tiskárnu*. Přidejte tiskárnu
+- mělo by vám to dát možnost vytisknout zkušební stránku (podle toho si můžete ověřit zda vše funguje). Poté by se vám měla na serveru daná stránka zobrazit.
+-  Následně v PDFCreatoru vlezte do nastavení (auto-save) A zadejte složku v Home>dokumenty kde se vám budou ukládat všechny vytisklé zprávy od ostatních uživatelů. 

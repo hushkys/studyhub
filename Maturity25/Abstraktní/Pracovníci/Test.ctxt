@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Test
+comment0.text=\ Soubor\ je\ ulozen\ v\ kodovani\ UTF-8.\r\nKontrola\ k\u00F3dov\u00E1n\u00ED\:\ P\u0159\u00EDli\u0161\ \u017Elu\u0165ou\u010Dk\u00FD\ k\u016F\u0148\ \u00FAp\u011Bl\ \u010F\u00E1belsk\u00E9\ \u00F3dy.
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\r\n\ Metoda,\ prost\u0159ednictv\u00EDm\ n\u00ED\u017E\ se\ spou\u0161t\u00ED\ cel\u00E1\ aplikace.\r\n\r\n\ @param\ args\ Parametry\ p\u0159\u00EDkazov\u00E9ho\ \u0159\u00E1dku\r\n
+numComments=2

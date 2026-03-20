@@ -1,0 +1,45 @@
+﻿3 - Kybernetické hrozby
+středa 11. března 2026
+10:51
+ 
+· Co je kybernetická hrozba?
+· Riziko
+· Kyb. Událost 
+· Kyb. Incident 
+ 
+Dělení kyb hrozeb
+· Úmyslné
+o Útoky 
+o Ddos 
+o Krádež
+o Ransomware
+o To co chce útočník provést
+· Neúmyslné
+o Např. Něco omylem smažu když pracuju na projektu
+o Prozrazení informací
+o Poškození technického aktiva
+o Náhodné - Živelné pohromy, blackout, povodně, vysoké teploty
+· Umístění 
+o Vnitřní (uvnitř firmy)
+§ Technické závady, personál, prasklé potrubí
+§ Špionáž
+§ Sociální inženýrství
+§ phishing
+o Vnější (mimo firmu, kyber prostor)
+§ Různé typy útoku
+§ Živelné katastrofy
+ 
+Typy útoků - co jaká hrozba znamená?
+· Útoky na infrastrukturu
+· Viry, co to je, jak je odstranit, jaké jsou typy - antimalware
+· Trojské koně - víc druhů, trojan dalmond (stahuje další koně), otevírá backdoory, špionážní, ...
+· Spam
+· Ransomware - šifrování dat a vyžadování výkupného, 6 generací
+· Krádež identity
+· Nespokojený zaměstnanec - směrnice, řády, autorský zákon, firemní politika
+· DDOS - obranný software, omezení přístupu, firewall
+ 
+Pen test
+· Kontrola zabezpečení firmy co se týče kybernetiky
+ 
+Antimalware

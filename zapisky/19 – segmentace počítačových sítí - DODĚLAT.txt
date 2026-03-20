@@ -1,0 +1,71 @@
+19 - segmentace pocítacových sítí - DODELAT
+streda 28. ledna 2026
+17:31
+ 
+https://www.cvtss.cz/images/2022_03/02.pdf
+ 
+ Co je segmentace síte
+.Rozdelení jedné fyzické nebo logické síte na menší cásti (segmenty).
+.Každý segment je samostatná cást síte s vlastní správou, pravidly a casto i oddeleným adresováním.
+.Duvody:
+- Zvýšení výkonu síte - méne kolizí, menší broadcast domény.
+- Zvýšení bezpecnosti - oddelení ruzných skupin (napr. studenti / ucitelé / servery).
+- Lepší správa - prehlednejší a flexibilnejší sít.
+- Možnost QoS a lepší kontroly nad prístupem.
+ 
+ 
+typy segmentace 
+a) Fyzická segmentace
+.Provádí se pomocí zarízení jako:
+.Switch (L2) - oddelení kolizních domén.
+.Router (L3) - oddelení broadcast domén.
+ 
+.Nevýhody:
+  - Potreba více fyzických zarízení.
+  - Menší flexibilita než logická segmentace.
+ 
+b) Logická segmentace
+.Segmentace pomocí softwaru / konfigurace.
+.Nejpoužívanejší formy:
+.VLAN (Virtual LAN) - virtuální oddelení na jednom switchi.
+- u routeru je podpora VLANu samozrejmá, u switchu ne
+- na L3 switchy
+- Použití:
+pro rozdelení, kam má v síti pocítac prístup (sdílené disky)
+pro nastavení rozdílné rychlosti internetu
+segmentace síte
+oddelení služeb
+- Tagování:
+tagovaná vlana (pokud se sít bude dál vetvit)
+netagovaná (do koncového zarízení)
+ 
+Subnetování - rozdelení IP adresního prostoru na menší podsíte.
+- Rozdelení IP adresního prostoru na menší cásti pomocí masky pod síte.
+- Príklad:
+Puvodní sít 192.168.1.0/24
+Rozdelení na dve 192.168.1.0/25 a 192.168.1.128/25
+ 
+ 
+Bezpecnostní aspekty segmentace
+.Oddelení citlivých cástí (napr. servery / IoT / žáci).
+.VLAN trunking zabezpecení - blokace nepoužívaných portu.
+.ACL - omezení komunikace mezi segmenty.
+.Firewall - kontrola provozu mezi sítemi.
+.Guest network - izolace hostu pomocí VLAN.
+ 
+ 
+Príklad praktického využití (školní sít)
+.každá VLANA má svou podsít a segmentace se stará o to aby na sebe nekteré napríklad nevideli 
+.pr: VLAN 20 - Ucitelé  (10.0.20.0/24)
+VLAN 30 - Studenti (10.0.30.0/24)
+- každá VLANA pá svou podsít 
+ 
++ výhody segmentace
+.lepší organizace síte 
+.Vyšší bezpecnost
+.vetší rychlost (menší broadcast domény)
+.flexibilita
+ 
+- nevýhody segmentace
+.Težší na správu
+.Nutnost L3 zarízení pro routování

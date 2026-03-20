@@ -1,0 +1,2 @@
+- popis vnitřní = soubor vlastností osoby, zvířete nebo věci
+- např. recenze

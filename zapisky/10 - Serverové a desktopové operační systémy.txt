@@ -1,0 +1,221 @@
+10 - Serverové a desktopové operacní systémy
+streda 31. prosince 2025
+11:15
+ 
+
+OS je základním programovým vybavením pro pocítac
+Umožnuje beh programu a ovlivnuje, jak bude pocítacový systém komunikovat s uživatelem
+OS se používají I v jiných zarízení, kterí mají pocítac zabudovaný, napr mobilní telefony, konzole, televize, routery atd
+Použití OS usnadnuje vývoj programového vybavení a zprístupnuje jeho vývoj I jiným subjektum než je výrobce
+Mezi nejpoužívanejší druhy operacních systému osobních pocítacu patrí Microsoft Windows, macOS a Linux, u mobilních telefonu Android, iOS a HarmonyOS
+Distribuce Linuxu jsou dominantní v odvetví serveru a superpocítacu
+ 
+Delí se:
+* Dle využití
+o Desktopové (Windows, MacOS, Linux)
+o Serverové (Linux server, Windows server, Mac server)
+* Podle architektury (zpracovávání dat a velikost RAM)
+o 64bit
+o 32bit
+ 
+License
+* GNU / GPL - Linux
+* EULA - windows, mac
+ 
+ReactOS - open source, linux, klon Windows
+ 
+Holý pocítac - jen hardware bez OS
+ 
+Hyper threading - k jednomu fyzickému vláknu je jedno logické, OS se rozhoduje jakému jádru dá jakou operaci
+ 
+Multitasking - Provádení více úkonu najednou, dá se používat v jeden cas jen jedna, ostatní jen beží
+ 
+4 cásti OS
+* Jádro - kernel
+* User Interface 
+o Grafické - GUI
+o Konzolové - CLI
+* Aplikace (malování, poznámkový blok,...)
+* Aplikace tretích stran (hry treba, 7zip, totalcomander, ...)
+ 
+Porovnání Windows a Linux
+* Linux nezná složky, diskové oddíly
+* Linux má v koreni root
+* Windows má C:/, D:/ atd
+* Základní složky Win -  users, windows, program files - pro 64 bit, Program files (x86) - pro 32 bit, Program data (skrytá systémová složka)
+* Win 2 firewally - defender, etc/hosts
+ 
+Desktopové OS
+* Zamerení na jednotlivce, uživatelskou prívetivost
+ 
+Windows
+* Od spolecnosti Microsoft
+* Grafické uživatelské rozhraní
+* Verze se liší jádrem systému
+* První Windows 1.0
+* Masové rozšírení dosáhlo Windows 95
+* Windows 98, Millennium Edition, NT, 7, 8, 8.1, 10, 11
+* Jméno pochází ze schopnosti mít otevreno více oken/aplikací najednou podle filozofie WIMP
+* WIPM - zkratka oznacující první grafické uživatelské rozhraní založené na práci s okny
+* Toto oznacení bylo v minulosti využíváno pro více operacních systému bežících na ruzné technologii, které sdílely podobné uživatelské prostredí a aplikacní rozhraní, zejména puvodní Windows pro MS-DOS, Windows NT a Windows CE. 
+* V soucasné dobe je však z nich jako jediné aktivne vyvíjeno jádro NT a všechny aktuální produkty firmy Microsoft jsou založeny na jeho technologii.
+* Grafické uživatelské rozhraní (GUI) bylo poprvé použito v roce 1973 v pocítaci Xerox Alto pod názvem WIMP
+ 
+MacOS
+* Od spolecnosti Apple
+* Systém od svého pocátku mel grafické uživatelské rozhraní podobné tomu na predchozím pocítaci Apple Lisa
+* V raných verzích podporoval pouze beh jediné aplikace, pozdeji byl pridán kooperativní multitasking
+* Základ systému se jmenuje Darwin a je složen z hybridního jádra unixového typu XNU spolu s množstvím BSD, GNU a dalších open source nástroju
+* Grafické uživatelské rozhraní se jmenuje Aqua a je plne graficky akcelerované
+* Základem Mac OS X je hybridní jádro XNU
+* Systém macOS je plne prizpusoben pocítacum Macintosh. Ackoliv na Macích mužete spustit Windows, opacne to možné není.
+* Východisko Apple našel odkupem spolecnosti NeXT svého nekdejšího zakladatele Steva Jobse v roce 1997, címž získal objektove orientovaný operacní systém NeXTSTEP
+ 
+Linux
+* svobodný a otevrený pocítacový operacní systém, který je založený na linuxovém jádru
+* Linuxové systémy jsou šíreny v podobe distribucí, které je možné nainstalovat nebo používat bez instalace (tzv. live CD)
+* Používané licence umožnují systém zdarma a velmi volne používat, distribuovat i upravovat
+* Operacní systém Linux používá Linux kernel
+* Název je odvozen z krestního jména jeho tvurce Linuse Torvaldse a koncovka x odkazuje práve na Unix
+* Unix - ochranná známka operacního systému vytvoreného v Bellových laboratorích americké firmy AT&T v roce 1969
+* Každý program se muže skládat z jednoho nebo více procesu, tedy se jedná o víceúlohový systém
+* Každý proces potom muže mít jeden nebo více podprocesu
+* V soucasné dobe je oznacením Linux míneno nejen jádro operacního systému, ale zahrnuje do nej též veškeré programové vybavení
+* Linux je open source software, což znamená, že jsou k dispozici jeho zdrojové kódy, které lze za dodržení jistých podmínek upravovat a vše dále šírit
+* Pro ochranu pred zneužitím zdrojových kódu používá open source software ruzné licence
+ 
+Serverové OS
+* Optimalizované pro výkon, stabilitu, zabezpecení a sdílení sítových zdroju
+ 
+Windows Server
+* První vydání Win server 2000 a nejnovejší Win 2025
+* GUI
+* Na bázi Win NT
+ 
+Linux server
+* Nejrozšírenejší, oblíbené pro svuj výkon, spolehlivost, bezpecnost a flexibilitu
+* Open source
+* GUI a konzolové rozhraní
+* Nejcastejší:
+o Ubuntu server
+o CentOS
+o Debian
+o Red Hat Enterprise Linux
+ 
+FreeBSD
+* svobodný moderní unixový operacní systém, který vznikl z BSD verze Unixu vyvinutého na Kalifornské Univerzite v Berkeley
+* svobodný moderní unixový operacní systém, který vznikl z BSD verze Unixu vyvinutého na Kalifornské Univerzite v Berkeley
+* FreeBSD je vyvíjen jako kompletní operacní systém - jádro, ovladace zarízení a všechny uživatelské utility jako napríklad shell
+* Díky licencování se vetšina zdrojových kodu FreeBSD stala nedílnou soucástí jiných operacních systému, jako je Darwin od Applu
+ 
+ 
+Typické serverové služby
+Serverové OS poskytují ruzné služby, napríklad: 
+Databázový server
+Ukládá a zprístupnuje databáze klientum (MySQL, Oracle, PostgreSQL). 
+Souborový server
+Sdílí soubory mezi uživateli a usnadnuje zálohování dat. 
+Webový server
+Hostuje webové stránky a odpovídá na HTTP požadavky. 
+Mail server
+Zpracovává e-maily pomocí protokolu:
+• SMTP server - prenos pošty mezi servery
+• POP3/IMAP - prístup klienta k pošte 
+Tiskový server
+Spravuje frontu tiskových úloh a pripojené tiskárny. 
+Proxy server
+Zprostredkovává pripojení klientu a tím zvyšuje bezpecnost a výkon. 
+DNS server
+Prekládá doménová jména na IP adresy (napr. seznam.cz ? 77.77.77.77). 
+ 
+Tabulka Desktop/Server OS
+Vlastnost Desktop OS Server OS
+Urceno pro jednotlivce více uživatelu
+Uživatelské rozhraní GUI CLI nebo minimalistické GUI
+Zamerení komfort a aplikace výkon a služby
+Provoz interaktivní práce nepretržitý beh
+Príklady Windows, macOS, Linux Windows Server, Linux Server
+ 
+Uživatelské rozhraní
+ 
+CLI
+ 
+• Command Line Interface
+• Príkazový rádek
+• Nenárocný na systémové prostredky ale nárocnejší na použití
+GUI
+ 
+• Graphical User Interface
+• Nárocný na systémové prostredky ale méne nárocný na použití
+• Ovládání pomocí myši a klávesnice
+• Je uživatelsky prívetivejší
+ 
+komponenty
+• Jádro
+• Prostredí (GUI, CLI)
+ 
+Jádro
+• Cást operacního systému, která je pri startu pocítace zavedena do operacní pameti.
+• Po zavedení do pameti je jádru predáno rízení, jádro dokoncí inicializaci hardwaru a následne zajištuje správu prostredku, umožnuje spouštení programu a poskytuje jim své služby.
+• U pokrocilých operacních systému nikdy neztrácí kontrolu nad pocítacem a po celou dobu jeho behu koordinuje cinnost všech spuštených procesu.
+ 
+Licencování
+Open-source
+• BSD - FreeBSD
+• GPL - Linux
+Closed-source (proprietární)
+• EULA - Microsoft Windows
+• Apple SLA - MacOS
+ 
+Architektura
+• 32bit (adresuje maximálne 4GB pameti RAM)
+• 64bit (dokáže adresovat 16 exabajtu pameti RAM)
+ 
+Ovladac
+• Zprístupnuje služby zarízení
+• Umožnuje komunikaci se zarízením
+ 
+Multitasking
+• Zpracování více úloh na jednou
+• Operacní systém prideluje procesorový cas bežícím procesum (prepíná mezi nimi)
+• Jedno jádro (vlákno) dokáže zpracovávat v danou chvíli pouze jednu operaci.
+• Prerušení (anglicky interrupt) je metoda pro asynchronní obsluhu událostí, kdy procesor preruší vykonávání sledu instrukcí, vykoná obsluhu prerušení, a pak pokracuje v predchozí cinnosti
+• Delení
+• Kooperativní multitasking - Operacní systém respektuje požadavek aplikace, rízení si navzájem predávají jednotlivé procesy, je velmi zranitelný
+• Preemptivní multitasking - Zdroje prideluje operacní systém, pád jednoho procesu neznamená ukoncení práce celého systému
+BOOT
+ 
+• Zavádení operacního systému
+• Spuštení služeb
+Proces
+ 
+• Úloha, kterou procesor zpracovává
+• Využívá instrukce
+ 
+Instrukce
+• Príkaz pro provedení elementární operace procesoru, kterou je procesor schopen prímo vykonat
+ 
+Souborový systém
+• Organizace dat
+ 
+Souborové systémy
+• Multiplatformní - FAT32, exFAT
+• Windows - NTFS, exFAT, ReFS
+• Linux - Ext4, Ext3, ZFS, Btrfs
+ 
+Služba / démon
+• Proces na pozadí
+• Spouští se pri spouštení systému
+ 
+Organizace pameti
+• Stránkovací soubor (swap file) - virtuální pamet na disku
+• Alokace pameti
+ 
+Zabezpecení
+• Firewall (slouží k rízení a zabezpecování sítového provozu mezi sítemi)
+• Aktualizace
+• Antimalware (PC software sloužící k identifikaci a eliminaci PC viru)
+ 
+ 
+ 
+ 

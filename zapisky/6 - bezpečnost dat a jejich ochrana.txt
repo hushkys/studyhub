@@ -1,0 +1,62 @@
+﻿6 - bezpečnost dat a jejich ochrana
+neděle 28. prosince 2025
+15:21
+ 
+Jak data chránit?
+· Softwareově
+o Silná hesla
+o Šifrování dat
+o Měnění hesel
+o Mít aktivní zálohy
+o Oprávení jen pro určité osoby
+· Hardvareově
+o Fyzické karty o prověření totožnosti
+o Zamykání počítačů nebo serveru na bezpečných místech proti vloupání, či přírodním hrozbám
+ 
+Rizika
+· Může dojít např k poruše
+o Pevný disk se porouchá, poškrábe
+o Výpadek proudu (lze předejít záložním zdrojem, UPS)
+· Mylné smazání dat
+· Krádež dat
+· Zašifrování dat vnější osobou a požadování výkupného (ransomeware)
+· Breach hesel 
+· Jiné viry
+o Viry (Viruses): Připojují se k legitimním souborům a šíří se jejich infikováním, poškozují data.
+o Červi (Worms): Samostatně se šíří po sítích, nevyžadují hostitelský soubor. 
+o Trojské koně (Trojans): Maskují se jako neškodné programy, ale obsahují škodlivý kód. 
+o Adware: Zobrazuje nežádoucí reklamy.
+o Phishing - podvodníci se vydávají za důvěryhodné zdroje (banky, firmy, přátele) a snaží se vylákat z obětí citlivé údaje (hesla, čísla platebních karet, PINy) nebo je přimět ke kliknutí na škodlivý odkaz či otevření infikované přílohy, často prostřednictvím falešných e-mailů, SMS nebo zpráv, které zneužívají sociální inženýrství k vyvolání strachu nebo zvědavosti
+o Keylogger - čte co se píše na klávesnici
+ 
+Jak jim předejít nebo se bránit
+· Zálohování
+o Kopie dat, když data někdo ukradne nebo se s nimi něco stane, nahradí se zálohou
+o Ukládají se buť fyzicky
+§ Pevný disk
+§ Flash disk
+§ DVD a CD
+§ Diskety 
+o Nebo cloudově
+§ Např. Na server
+o Zálohy by měli probíhat často, pravidelně a kvalitně
+o Někdy je lepší mít I fyzickou I cloudovou verzi
+· Aktualizace softwaru
+o S aktualizacemi přicházejí I nové bezpečnostní opatření, čím starší software nebo OS, tím větší riziko
+· Šifrování dat
+· Silná a pravidelně měněná hesla
+· Školení zaměstnanců ve firmě
+· Antivir
+· Zamezení odposlouchávání
+· Najmutí někoho kdo zkoumá možné slabiny
+ 
+CIA
+Základní bezpečnostní atributy v těchto doménách jsou:
+· důvěrnost - prevence neautorizovaného vyzrazení dat,
+· integrita - prevence neautorizované úpravy dat,
+· dostupnost - prevence ztráty přístupu k datům.
+ 
+https://www.systemonline.cz/clanky/bezpecnost-dat-v-praxi.htm?mobilelayout=false
+ 
+
+ 

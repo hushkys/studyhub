@@ -1,0 +1,69 @@
+14 - aktivní a pasivní sítové prvky
+pátek 26. prosince 2025
+18:58
+ 
+* Aktovní sítové prvky - aktivne se podílí na rízení a chou celé nebo cásti síte
+* Pasivní - fyzické propojení, defako kabely
+ 
+HUB
+* 90.léta
+* Jedná se o krabicku kde jsou jednotlivé konektory na RJ-45
+* Chová se jako switch ale není to switch
+* Setkáme se s ním u USB
+* Vlastnosti:
+o Zesiluje signál
+o Kopírovat príchozí signál na všechny porty ostatních
+o Propojení do více pocítacu
+o Zvýšení rychlosti
+* Primitivní zarízení které slouží k rozbocení kabelu (signálu)
+* Kopíruje príchozí signál na všechny ostatní porty (port ormos[genshin haha])
+* Na zarízeních pro které signál není urcen, tak zaniká
+ 
+SWITCH (L2)
+* Podobný HUBu
+* Switch spojuje zarízení v síti do sítové topologie Star
+* Plechová krabicka která obsahuje ruzný pocet ethernetových portu
+* Min pocet 4 portu
+* Max pocet 48(52) portu
+* Pracují s rámci, pro jejich analýzu používá metody
+* Metody:
+o Cut and through
+o Store and forward
+o Adapting switching
+o Fragment freed
+2 typy delení:
+SOHO -L2 - Malé firmy a domácí použití
+PRO - L2 - Profesionální použití
+ 
+Bez OS
+S OS - iOS, HP, CISCO, Dlink, Aruba
+ 
+store and forward - Koncepcne pracují zpusobem "store and forward" - rámec z jednoho rozhraní prijmou, uloží si do vyrovnávací pameti, prozkoumají jeho hlavicky, zkontroluji FCS a následne odvysílají do príslušného rozhraní.
+cut-through switching - Soucasné prepínace ale tento proces casto optimalizují, takže k analýze hlavicek dochází, jakmile dorazí zacátek rámce. Ani s vysíláním do cílového rozhraní se neceká, až dorazí celý rámec, ale zahajuje se co nejrychleji, aby zpoždení rámce v prepínaci bylo minimální.
+fragment free - prepínac zacne preposílat rámec až po prijetí 64 bytu, kdy je jisté, že na daném segmentu nevznikla kolize - má význam v prípade, kdy je do prepínace pripojen hub.
+adaptive switching - automatické prepínání mezi metodami cut-through switching a store and forward
+ 
+ROUTER
+* Slouží k tvorbe routování podsítí, vyhledávání správné cesty pro daný packet
+* Smeruje packet skrz podsíte, poprípade vyhodí packet z podsíte pomocí tzv defaultní routy
+* Vše funguje na bázi routovacích protokolu (OSPF, EIGRP,BGP)
+* Jedná se o tzv dynamické routování
+* U statického routování administrátor plní routovací tabulky sám
+Routovací protokoly
+* IGP se používají v lokálních sítích a používají 2 metody pro typ routování (nexthop - distance vector, cena linky - linkstate)
+* EGP používá se pouze v internetu (path vector - cesta)
+* RIP - jedná se o dynamický protokol, využíváme metodu nexthop, címž urcuje nejkradší vzdálenost pro packet
+* Každý routr si udržuje svou routovací tabulku, ve které je i daná vzdálenost do všech podsítí
+* Routry si mezi sebou pravidelne vymenují routovací tabulku
+* Nevýhody RIP: Starý, routovací smycky - rešení pomocí TTL
+
+* Díky pravidelnému vymenování tabulek dochází ke zvýšenému provozu na síti
+ 
+ 
+MODEM
+* Složí pro prevod mezi analogovým a digitálním signálem
+* Používají predevším pro prenos digitálních dat pomocí analogové prenosové trasy
+* Nekolik typu podle typu pripojení (telefoní, kabelový, WiFi)
+ 
+
+ 

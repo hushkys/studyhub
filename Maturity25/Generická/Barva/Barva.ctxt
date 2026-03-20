@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Barva
+comment1.params=color
+comment1.target=Barva(java.lang.Object)
+comment2.params=color
+comment2.target=void\ setColor(java.lang.Object)
+comment3.params=
+comment3.target=java.lang.Object\ getColor()
+numComments=4

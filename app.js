@@ -308,10 +308,10 @@ function handleRoute() {
 window.addEventListener('popstate', handleRoute);
 function setBreadcrumb(crumbs) {
   const el = document.getElementById('navBreadcrumb');
+  const notch = document.getElementById('navNotchBc');
   if (!el) return;
-  if (!crumbs.length) { el.innerHTML = ''; return; }
-  const mobile = window.innerWidth < 600;
-  el.innerHTML = crumbs.map((c, i) => {
+  if (!crumbs.length) { el.innerHTML = ''; if (notch) notch.innerHTML = ''; return; }
+  const buildHtml = (mobile) => crumbs.map((c, i) => {
     const isLast = i === crumbs.length - 1;
     const arrow = i > 0 ? '<span class="bc-arrow">\u203a</span>' : '';
     const cls = isLast ? 'bc-item bc-active' : 'bc-item bc-link';
@@ -321,10 +321,15 @@ function setBreadcrumb(crumbs) {
     const label = c.label.length > maxLen ? c.label.slice(0, maxLen) + '\u2026' : c.label;
     return `${arrow}<span class="${cls}"${action} title="${c.label}">${dot}${label}</span>`;
   }).join('');
-  el.querySelectorAll('[data-action]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      if (btn.dataset.action === 'home') goHome();
-      else if (btn.dataset.action === 'cat') goCategory(S.cat);
+  el.innerHTML = buildHtml(false);
+  if (notch) notch.innerHTML = buildHtml(true);
+  [el, notch].forEach(container => {
+    if (!container) return;
+    container.querySelectorAll('[data-action]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (btn.dataset.action === 'home') goHome();
+        else if (btn.dataset.action === 'cat') goCategory(S.cat);
+      });
     });
   });
 }

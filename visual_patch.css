@@ -640,3 +640,32 @@
 
   .hero-content { max-width: 1400px; }
 }
+
+/* ---- MOBILE BREADCRUMB NOTCH ---- */
+.nav-notch {
+  display: none; /* shown only on mobile via media query */
+  position: absolute;
+  bottom: 0; left: 50%; transform: translate(-50%, 100%);
+  background: var(--glass);
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
+  border: 1px solid var(--glass-border);
+  border-top: none;
+  border-radius: 0 0 16px 16px;
+  padding: 4px 14px 6px;
+  z-index: 199;
+  pointer-events: auto;
+  box-shadow: 0 4px 16px rgba(0,0,0,.18);
+}
+
+.nav-notch-bc {
+  display: flex; align-items: center; gap: 2px;
+  font-size: 0.7rem; white-space: nowrap;
+}
+
+.nav-notch-bc .bc-item {
+  max-width: 110px; padding: 2px 6px; font-size: 0.7rem;
+}
+
+.nav-notch:empty,
+.nav-notch-bc:empty { display: none !important; }

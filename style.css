@@ -286,8 +286,8 @@ body::before {
   background: var(--glass);
   backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
   -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
-  border-bottom: 1px solid var(--glass-border);
-  transition: background var(--dur), box-shadow var(--dur);
+  border-bottom: 1px solid transparent;
+  transition: background var(--dur), box-shadow var(--dur), border-color var(--dur);
 }
 .navbar::after {
   content: '';
@@ -298,6 +298,7 @@ body::before {
 .navbar.scrolled::after { opacity: 1; }
 .navbar.scrolled {
   background: var(--glass2);
+  border-bottom-color: var(--glass-border);
   box-shadow: 0 1px 0 var(--border), 0 4px 32px rgba(0,0,0,.22);
 }
 .navbar-inner {

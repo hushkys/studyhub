@@ -9,50 +9,51 @@ const CACHE_PATH = '.gemini_cache/ang_sloh.md';
 
 const PROMPT = `Jsi učitel angličtiny na střední škole v ČR. Vytvoř KOMPLETNÍ studijní materiál pro maturanta na téma: Písemná část maturitní zkoušky z angličtiny (Writing).
 
-FORMÁTOVACÍ PRAVIDLA (PŘÍSNĚ DODRŽUJ):
-- Nadpisy sekcí: ### Název útvaru
-- Pod každým nadpisem: krátký popis + struktura + fráze jako bullet list (*)
-- Ukázka textu: každý řádek začíná > (blockquote markdown), prázdný řádek v ukázce = řádek obsahující pouze >
-- Datum/místo dopisu: <div style="text-align:right">Město, datum</div> PŘED ukázkou (ne uvnitř)
-- Oddělovač mezi sekcemi: ---
-- Tabulky: markdown tabulky
-- ŽÁDNÉ jiné HTML tagy
+FORMÁTOVACÍ PRAVIDLA — PŘÍSNĚ DODRŽUJ:
+1. Nadpisy sekcí: ### Název
+2. Bullet listy: * položka
+3. Ukázky textu: každý řádek ukázky začíná > (blockquote), prázdný řádek uvnitř ukázky = řádek obsahující POUZE >
+4. Před každou ukázkou napiš tučně: **Ukázka:**
+5. Oddělovač sekcí: ---
+6. Tabulky: standardní markdown tabulky
+7. ŽÁDNÉ HTML tagy — ani <div>, ani nic jiného
+8. Datum/místo dopisu piš jako PRVNÍ řádek uvnitř blockquote, zarovnaný doprava pomocí mezer nebo prostě jako první řádek: > Prague, 10th June 2025
 
-PŘÍKLAD SPRÁVNÉHO FORMÁTU UKÁZKY:
-<div style="text-align:right">Prague, 10th June 2025</div>
+PŘÍKLAD SPRÁVNÉHO FORMÁTU:
 
+**Ukázka:**
+> Prague, 10th June 2025
+>
 > Dear Sir or Madam,
 >
-> I am writing to inquire about the summer course.
+> I am writing to inquire about the summer language course advertised on your website. Could you please send me more details about the schedule and fees?
 >
 > Yours faithfully,
 > Jan Novák
 
-OBSAH — zahrň VŠECHNY tyto sekce v tomto pořadí:
+---
+
+OBSAH — zahrň VŠECHNY sekce v tomto pořadí:
 
 ### Obecné informace o písemné části
-- čas: 70 minut celkem
-- 2 části: část 1 (130–160 slov), část 2 (70–90 slov)
-- 4 hodnotící kritéria: obsah, organizace, slovní zásoba, gramatika
-- tabulka všech útvarů s částí a rozsahem
+- čas, části, rozsah slov, hodnotící kritéria
+- markdown tabulka útvarů: Útvar | Část | Rozsah slov
 
 ---
 
 ### Neformální dopis / e-mail
-- popis, kdy se používá
+- kdy se používá, komu
 - struktura (bullet list)
 - klíčové fráze (bullet list)
-- <div style="text-align:right">London, 12th May 2025</div>
-- ukázka v blockquote (130–160 slov, realistická, kompletní)
+- **Ukázka:** blockquote, 130–160 slov, realistická, kompletní, datum jako první řádek
 
 ---
 
 ### Formální dopis / e-mail
-- popis
+- kdy se používá
 - struktura
 - klíčové fráze
-- <div style="text-align:right">Prague, 10th June 2025</div>
-- ukázka v blockquote (130–160 slov)
+- **Ukázka:** blockquote, 130–160 slov, datum jako první řádek
 
 ---
 
@@ -60,7 +61,7 @@ OBSAH — zahrň VŠECHNY tyto sekce v tomto pořadí:
 - popis
 - struktura
 - klíčové fráze
-- ukázka v blockquote (130–160 slov, s nadpisem jako první řádek ukázky)
+- **Ukázka:** blockquote, 130–160 slov, první řádek = nadpis článku
 
 ---
 
@@ -68,7 +69,7 @@ OBSAH — zahrň VŠECHNY tyto sekce v tomto pořadí:
 - popis, narrative tenses
 - struktura
 - klíčové fráze
-- ukázka v blockquote (130–160 slov)
+- **Ukázka:** blockquote, 130–160 slov
 
 ---
 
@@ -76,8 +77,7 @@ OBSAH — zahrň VŠECHNY tyto sekce v tomto pořadí:
 - popis
 - struktura
 - klíčové fráze
-- <div style="text-align:right">Prague, 15th May 2025</div>
-- ukázka v blockquote (130–160 slov)
+- **Ukázka:** blockquote, 130–160 slov, datum jako první řádek
 
 ---
 
@@ -85,8 +85,7 @@ OBSAH — zahrň VŠECHNY tyto sekce v tomto pořadí:
 - popis
 - struktura
 - klíčové fráze
-- <div style="text-align:right">London, 10th June 2025</div>
-- ukázka v blockquote (130–160 slov)
+- **Ukázka:** blockquote, 130–160 slov, datum jako první řádek
 
 ---
 
@@ -94,8 +93,7 @@ OBSAH — zahrň VŠECHNY tyto sekce v tomto pořadí:
 - popis
 - struktura
 - klíčové fráze
-- <div style="text-align:right">Home, 12th April 2025</div>
-- ukázka v blockquote (70–90 slov)
+- **Ukázka:** blockquote, 70–90 slov, datum jako první řádek
 
 ---
 
@@ -103,8 +101,7 @@ OBSAH — zahrň VŠECHNY tyto sekce v tomto pořadí:
 - popis
 - struktura
 - klíčové fráze
-- <div style="text-align:right">Bristol, 5th July 2025</div>
-- ukázka v blockquote (70–90 slov)
+- **Ukázka:** blockquote, 70–90 slov, datum jako první řádek
 
 ---
 
@@ -112,8 +109,7 @@ OBSAH — zahrň VŠECHNY tyto sekce v tomto pořadí:
 - popis
 - struktura
 - klíčové fráze
-- <div style="text-align:right">School Hall, 20th May 2025</div>
-- ukázka v blockquote (70–90 slov)
+- **Ukázka:** blockquote, 70–90 slov
 
 ---
 
@@ -121,8 +117,7 @@ OBSAH — zahrň VŠECHNY tyto sekce v tomto pořadí:
 - popis, imperativ
 - struktura
 - klíčové fráze
-- <div style="text-align:right">Kitchen, 15th August 2025</div>
-- ukázka v blockquote (70–90 slov)
+- **Ukázka:** blockquote, 70–90 slov
 
 ---
 
@@ -136,10 +131,10 @@ OBSAH — zahrň VŠECHNY tyto sekce v tomto pořadí:
 
 ---
 
-### Linking Words (Propojovací výrazy)
-- tabulka: Kategorie | Výrazy (přidávání, kontrast, příčina, pořadí, shrnutí, názor)
+### Linking Words — Propojovací výrazy
+- tabulka: Kategorie | Výrazy
 
-Vrať POUZE Markdown text, bez úvodního komentáře, bez \`\`\`markdown bloků.`;
+Vrať POUZE Markdown text, bez úvodního komentáře, bez \`\`\`markdown bloků, bez jakéhokoliv HTML.`;
 
 async function main() {
   if (!fs.existsSync('.gemini_cache')) fs.mkdirSync('.gemini_cache');

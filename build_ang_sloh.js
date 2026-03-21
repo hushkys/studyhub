@@ -4,7 +4,7 @@ require('dotenv').config();
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 
 const API_KEY = process.env.GEMINI_API_KEY;
-const MODEL_NAME = 'gemini-2.5-flash-preview-05-20';
+const MODEL_NAME = 'gemini-3.1-flash-lite-preview';
 const CACHE_PATH = '.gemini_cache/ang_sloh.md';
 
 const PROMPT = `Jsi učitel angličtiny na střední škole v ČR. Vytvoř KOMPLETNÍ studijní materiál pro maturanta na téma: Písemná část maturitní zkoušky z angličtiny (Writing).

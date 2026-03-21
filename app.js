@@ -460,7 +460,16 @@ function parseMd(text) {
     if (divm) { flushBuf(); closeUl(); closeOl(); html += `<div style="text-align:right">${esc(divm[1])}</div>`; continue; }
     const kvm = line.match(/^\*{0,2}([^:*]{2,40})\*{0,2}:\s*(.+)/);
     if (kvm && kvm[1].length < 35) { flushBuf(); html += `<div class="kv-row"><span class="kv-key">${esc(kvm[1])}:</span><span class="kv-val">${mdInline(kvm[2])}</span></div>`; continue; }
-    if (line.startsWith('>')) { flushBuf(); html += `<blockquote>${mdInline(line.replace(/^>\s*/,''))}</blockquote>`; continue; }
+    if (line.startsWith('>')) {
+      flushBuf(); closeUl(); closeOl();
+      const bqLines = [line.replace(/^>\s*/,'')];
+      while (i + 1 < lines.length && (lines[i+1].startsWith('>') || lines[i+1] === '>')) {
+        i++;
+        bqLines.push(lines[i].replace(/^>\s*/,''));
+      }
+      html += `<blockquote>${bqLines.map(l => l === '' ? '<br>' : mdInline(l)).join('\n')}</blockquote>`;
+      continue;
+    }
     buffer.push(line);
   }
   flushBuf(); closeUl(); closeOl();

@@ -456,6 +456,8 @@ function parseMd(text) {
     const olm = line.match(/^\d+\.\s+(.+)/);
     if (olm) { flushBuf(); closeUl(); if (!inOl) { html += '<ol>'; inOl = true; } html += `<li>${mdInline(olm[1])}</li>`; continue; }
     closeUl(); closeOl();
+    const divm = line.match(/^<div\s+style="text-align:\s*right">(.*?)<\/div>$/i);
+    if (divm) { flushBuf(); closeUl(); closeOl(); html += `<div style="text-align:right">${esc(divm[1])}</div>`; continue; }
     const kvm = line.match(/^\*{0,2}([^:*]{2,40})\*{0,2}:\s*(.+)/);
     if (kvm && kvm[1].length < 35) { flushBuf(); html += `<div class="kv-row"><span class="kv-key">${esc(kvm[1])}:</span><span class="kv-val">${mdInline(kvm[2])}</span></div>`; continue; }
     if (line.startsWith('>')) { flushBuf(); html += `<blockquote>${mdInline(line.replace(/^>\s*/,''))}</blockquote>`; continue; }
